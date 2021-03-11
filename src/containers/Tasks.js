@@ -1,25 +1,34 @@
-import Slide from '../components/Carousel';
+import Date from '../components/Date';
+import Progress from '../components/Progess';
+import Task from '../components/task';
+import '../styles/tasks.css';
 
-const Tasks = () => (
-  <div>
+const Tasks = () => {
+  const tasks = [{
+    id: 1,
+    name: 'biceps',
+    progress: 60,
+    img: 'https://img.icons8.com/wired/64/000000/flex-biceps.png',
+  }];
+  return (
     <div>
-      <Slide />
-    </div>
-    <div>
       <div>
-        uno
+        <Date />
+        <Progress show={3} />
       </div>
-      <div>
-        dos
-      </div>
-      <div>
-        tres
-      </div>
-      <div>
-        cuatro
-      </div>
-    </div>
-  </div>
-);
+      <div className="bg-tasks">
 
+        <div className="row p-3">
+          {tasks.map(todo => (
+            <Task
+              key={todo.id}
+              task={todo}
+            />
+          ))}
+        </div>
+
+      </div>
+    </div>
+  );
+};
 export default Tasks;

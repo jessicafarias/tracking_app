@@ -1,0 +1,4 @@
+#big > .rec-carousel-wrapper >.galrjd {
+  width: 150% !important;
+  overflow-x: hidden;
+}

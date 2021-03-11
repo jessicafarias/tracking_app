@@ -1,0 +1,9 @@
+.bg-tasks {
+  background-color: rgb(212, 212, 212);
+  min-height: 50vh;
+  width: 100%;
+}
+
+.bg-task {
+  background-color: white;
+}

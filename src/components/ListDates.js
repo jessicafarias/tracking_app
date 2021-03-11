@@ -5,7 +5,7 @@ const ListDates = () => (
     <p className="day-tag">Today</p>
     <div className="row w-100 justify-content-center align-items-center">
       <div className="col-2">
-        <svg viewBox="0 0 36 36" className="circular-chart blue">
+        <svg viewBox="0 0 36 36" className="circular-chart blue p-2">
           <path
             className="circle-bg"
             d="M18 2.0845
@@ -31,7 +31,7 @@ const ListDates = () => (
     <p className="day-tag">Yesterday</p>
     <div className="row w-100 justify-content-center align-items-center">
       <div className="col-2">
-        <svg viewBox="0 0 36 36" className="circular-chart blue">
+        <svg viewBox="0 0 36 36" className="circular-chart blue p-2">
           <path
             className="circle-bg"
             d="M18 2.0845
@@ -55,9 +55,9 @@ const ListDates = () => (
       <p className="col-3"> -0.4</p>
     </div>
     <p className="day-tag">Last week</p>
-    <div className="row w-100 justify-content-center align-items-center">
+    <div className="row w-100">
       <div className="col-2">
-        <svg viewBox="0 0 36 36" className="circular-chart blue">
+        <svg viewBox="0 0 36 36" className="circular-chart blue p-2">
           <path
             className="circle-bg"
             d="M18 2.0845

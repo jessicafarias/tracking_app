@@ -1,7 +1,7 @@
 button.rec-dot{
   background-color: rgba(16, 235, 199, 0.596);
   box-shadow: none;
-  visibility: hidden;
+  display: none;
 }
 
 button.rec-dot:hover, button.rec-dot:active, button.rec-dot:focus  {
