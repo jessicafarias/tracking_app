@@ -1,4 +1,8 @@
 .header-blue {
   background-color: #41b5e8;
   color: white;
+  height: 9vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }

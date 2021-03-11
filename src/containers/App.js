@@ -1,4 +1,5 @@
 import '../styles/App.css';
+import Dates from './Dates';
 import Header from './Header';
 import Toggle from './Toggle';
 
@@ -8,7 +9,9 @@ function App() {
       <header>
         <Header />
       </header>
-      <section />
+      <section className="view">
+        <Dates />
+      </section>
       <Toggle />
     </div>
   );
