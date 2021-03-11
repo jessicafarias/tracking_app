@@ -1,6 +1,6 @@
 import '../styles/App.css';
-import Header from './Header'
-import Toggle from './Toggle'
+import Header from './Header';
+import Toggle from './Toggle';
 
 function App() {
   return (
@@ -8,9 +8,7 @@ function App() {
       <header>
         <Header />
       </header>
-      <section>
-
-      </section>
+      <section />
       <Toggle />
     </div>
   );

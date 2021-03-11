@@ -8,7 +8,22 @@
 .st1{fill:#CED1D2;}
 .st2{fill:#212935;stroke:#212935;stroke-width:3.7;stroke-miterlimit:10;}
 
+button{
+  border: none;
+  background-color: #313944;
+  color:white;
+  padding: 5px;
+}
 .selected {
   background-color: #65C2EC;
+}
+
+.xs{
+  font-size: 10px;
+}
+
+.svg-icon{
+  height: 40px;
+  max-width: 40px;
 }
 
