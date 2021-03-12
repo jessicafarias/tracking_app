@@ -6,8 +6,13 @@ import '../styles/tasks.css';
 const Tasks = () => {
   const tasks = [{
     id: 1,
-    name: 'biceps',
-    progress: 60,
+    name: 'left bicep',
+    progress: 60.3,
+    img: 'https://img.icons8.com/wired/64/000000/flex-biceps.png',
+  }, {
+    id: 2,
+    name: 'right bicep',
+    progress: 80.3,
     img: 'https://img.icons8.com/wired/64/000000/flex-biceps.png',
   }];
   return (
@@ -18,11 +23,11 @@ const Tasks = () => {
       </div>
       <div className="bg-tasks">
 
-        <div className="row p-3">
+        <div className="row">
           {tasks.map(todo => (
             <Task
               key={todo.id}
-              task={todo}
+              todo={todo}
             />
           ))}
         </div>

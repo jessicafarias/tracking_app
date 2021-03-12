@@ -16,3 +16,34 @@ code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
 }
+
+@font-face {
+  font-family: 'HLight';
+  src: url(../assets/fonts/helvelighfree.ttf);
+  font-weight: normal;
+}
+
+@font-face {
+  font-family: 'HRegular';
+  src: url(../assets/fonts/Helvregfree.otf);
+  font-weight: normal;
+}
+
+@font-face {
+  font-family: 'HBold';
+  src: url(../assets/fonts/FreeSansBold.ttf);
+  font-weight: normal;
+}
+
+.font-sm {
+  font-family: 'HLight','Courier New', Courier, monospace;
+  font-size: small;
+  color: grey;
+}
+
+.font-md {
+  font-family: 'HLight','Courier New', Courier, monospace;
+  font-size: medium;
+  color: rgb(105, 105, 105);
+}
+

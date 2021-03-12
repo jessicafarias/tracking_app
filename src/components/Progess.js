@@ -33,15 +33,16 @@ const Progress = ({ show }) => {
                 <path
                   className="circle w-100"
               // strokeDasharray={`${book.percentage} ,100`}
-                  strokeDasharray="50,100"
+                  strokeDasharray="19,100"
                   d="M18 2.0845
               a 15.9155 15.9155 0 0 1 0 31.831
               a 15.9155 15.9155 0 0 1 0 -31.831"
                 />
-                <text x="18" y="20.35" className="percentage">90%</text>
+                <text x="18" y="20.35" className="percentage">19</text>
+                <text x="18" y="25.35" className="subpercentaje">(3hrs)</text>
               </svg>
             </div>
-            <p className="text-center">{item.title}</p>
+            <p className="text-center font-sm">{item.title}</p>
 
           </div>
         ))}

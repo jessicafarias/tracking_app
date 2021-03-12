@@ -1,11 +1,20 @@
 #big > .rec-carousel-wrapper >.galrjd {
-  width: 150% !important;
+  width: 140% !important;
   overflow-x: hidden;
 }
 
 .percentage {
-  fill: #666;
-  font-family: sans-serif;
-  font-size: 0.5em;
+  fill: rgb(59, 59, 59);
+  font-family: 'HRegular',sans-serif;
+  font-size: 10px;
+  font-weight:normal;
+  text-anchor: middle;
+}
+
+.subpercentaje{
+  fill: rgb(151, 151, 151);
+  font-family: 'HRegular',sans-serif;
+  font-size: 4px;
+  font-weight:normal;
   text-anchor: middle;
 }
