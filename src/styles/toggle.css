@@ -27,3 +27,11 @@ button{
   max-width: 40px;
 }
 
+.toggle {
+  position: fixed;
+  bottom: 0;
+  right: 0;
+  width: 100%;
+}
+
+

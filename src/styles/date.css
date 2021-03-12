@@ -29,8 +29,9 @@
 
 .day-tag {
   background-color: #F3F4F6;
-  color: #929292;
+  color: #696969;
   width: 100%;
-  font-size: 15px;
+  font-size: 13px;
+  font-family: 'HLight', 'Courier New', Courier, monospace;
   padding: 4px 15px;
 }

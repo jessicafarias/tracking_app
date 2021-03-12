@@ -1,7 +1,7 @@
 const Day = () => {
   const a = 50;
   return (
-    <div className="row w-100 justify-content-center align-items-center">
+    <div className="row w-100 justify-content-center align-items-center p-2 mt-1 mb-1">
       <div className="col-2">
         <svg viewBox="0 0 36 36" className="circular-chart blue p-2">
           <path

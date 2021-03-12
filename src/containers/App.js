@@ -1,16 +1,14 @@
 import '../styles/App.css';
 import { BrowserRouter, Switch, Route } from 'react-router-dom';
 import Dates from './Dates';
-import Header from './Header';
 import Toggle from './Toggle';
 import Tasks from './Tasks';
+import Header from './Header';
 
 function App() {
   return (
-    <div>
-      <header>
-        <Header />
-      </header>
+    <>
+      <Header />
       <section className="view">
         <BrowserRouter>
           <Switch>
@@ -20,7 +18,7 @@ function App() {
         </BrowserRouter>
       </section>
       <Toggle />
-    </div>
+    </>
   );
 }
 
