@@ -38,6 +38,7 @@ const Progress = ({ show }) => {
               a 15.9155 15.9155 0 0 1 0 31.831
               a 15.9155 15.9155 0 0 1 0 -31.831"
                 />
+                <text x="18" y="20.35" className="percentage">90%</text>
               </svg>
             </div>
             <p className="text-center">{item.title}</p>
