@@ -11,7 +11,6 @@ import { fetchTasksAction } from '../actions';
 const Tasks = ({ tasks, get }) => {
   useEffect(() => {
     getTasks().then(response => {
-      console.log(response);
       get(response);
     });
   }, []);
@@ -19,7 +18,7 @@ const Tasks = ({ tasks, get }) => {
     <div>
       <div>
         <Date />
-        <Progress show={3} />
+        <Progress show={3} items={tasks} />
       </div>
       <div className="bg-tasks">
         <div className="row">
