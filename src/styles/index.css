@@ -36,6 +36,13 @@ code {
   font-weight: normal;
 }
 
+.font-xs {
+  font-family: 'HLight','Courier New', Courier, monospace;
+  font-size: x-small;
+  color: grey;
+  padding: 0;
+}
+
 .font-sm {
   font-family: 'HLight','Courier New', Courier, monospace;
   font-size: small;
@@ -54,8 +61,20 @@ code {
   color: rgb(54, 54, 54);
 }
 
+.font-sm-regular {
+  font-family: 'HRegular','Courier New', Courier, monospace;
+  font-size: small;
+  color: rgb(54, 54, 54);
+}
+
 .font-md-bold {
   font-size: 17px;
+  font-weight: bold;
+  color: #494949;
+}
+
+.font-sm-bold {
+  font-size: 16px;
   font-weight: bold;
   color: #494949;
 }

@@ -23,7 +23,7 @@ const Progress = ({ show }) => {
         {items.map(item => (
           <div key={item.id} className="big">
             <div className="d-flex justify-content-center align-items-center">
-              <svg viewBox="0 0 36 36" className="circular-chart blue p-3">
+              <svg viewBox="0 0 36 36" className="circular-chart blue pl-3 pr-3 pb-2">
                 <path
                   className="circle-bg w-100"
                   d="M18 2.0845
@@ -38,11 +38,11 @@ const Progress = ({ show }) => {
               a 15.9155 15.9155 0 0 1 0 31.831
               a 15.9155 15.9155 0 0 1 0 -31.831"
                 />
-                <text x="18" y="20.35" className="percentage">19</text>
+                <text x="18" y="19" className="percentage">19</text>
                 <text x="18" y="25.35" className="subpercentaje">(3hrs)</text>
               </svg>
             </div>
-            <p className="text-center font-sm">{item.title}</p>
+            <p className="text-center font-xs">{item.title}</p>
 
           </div>
         ))}

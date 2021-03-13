@@ -1,7 +1,7 @@
 const Day = () => {
   const a = 50;
   return (
-    <div className="row w-100 justify-content-center align-items-center p-2 mt-1 mb-1">
+    <div className="row w-100 justify-content-center align-items-center p-2 m-auto">
       <div className="col-2">
         <svg viewBox="0 0 36 36" className="circular-chart blue p-2">
           <path
@@ -20,13 +20,13 @@ const Day = () => {
         </svg>
       </div>
       <div className="col-7">
-        <p className="font-md-regular">Sep 5 2013</p>
+        <p className="font-sm-regular">Sep 5 2013</p>
         <p className="font-sm">other ting</p>
       </div>
       <div className="col-3 flex-row">
         <div className="row">
           <div className="col-8 p-0 justify-content-center align-items-center m-auto">
-            <p className="text-right m-auto font-md-bold">
+            <p className="text-right m-auto font-sm-bold">
               -0.4
               <span className="font-sm">hrs</span>
             </p>

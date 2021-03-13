@@ -21,7 +21,7 @@ const Date = () => {
         {items.map(item => (
           <div
             key={item.id}
-            className="font-md"
+            className="font-sm"
           >
             {item.title}
           </div>

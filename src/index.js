@@ -8,9 +8,7 @@ import App from './containers/App';
 import './styles/reset.css';
 
 const Index = () => (
-  <>
-    <App />
-  </>
+  <App />
 );
 
 ReactDOM.render(<Index />, document.getElementById('root'));
