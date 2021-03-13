@@ -1,39 +1,42 @@
+import PropTypes from 'prop-types';
+import { connect } from 'react-redux';
 import Date from '../components/Date';
 import Progress from '../components/Progess';
 import Task from '../components/task';
 import '../styles/tasks.css';
 
-const Tasks = () => {
-  const tasks = [{
-    id: 1,
-    name: 'left bicep',
-    progress: 60.3,
-    img: 'https://img.icons8.com/wired/64/000000/flex-biceps.png',
-  }, {
-    id: 2,
-    name: 'right bicep',
-    progress: 80.3,
-    img: 'https://img.icons8.com/wired/64/000000/flex-biceps.png',
-  }];
-  return (
+const Tasks = ({ tasks }) => (
+  <div>
     <div>
-      <div>
-        <Date />
-        <Progress show={3} />
-      </div>
-      <div className="bg-tasks">
-
-        <div className="row">
-          {tasks.map(todo => (
-            <Task
-              key={todo.id}
-              todo={todo}
-            />
-          ))}
-        </div>
-
-      </div>
+      <Date />
+      <Progress show={3} />
     </div>
-  );
+    <div className="bg-tasks">
+
+      <div className="row">
+        {tasks.map(todo => (
+          <Task
+            key={todo.id}
+            todo={todo}
+          />
+        ))}
+      </div>
+
+    </div>
+  </div>
+);
+
+const mapStateToProps = state => ({
+  tasks: state.tasks,
+});
+
+Tasks.propTypes = {
+  tasks: PropTypes.arrayOf(PropTypes.shape({
+    id: PropTypes.number,
+    name: PropTypes.string,
+    img: PropTypes.string,
+    progress: PropTypes.number,
+  })).isRequired,
 };
-export default Tasks;
+
+export default connect(mapStateToProps, null)(Tasks);

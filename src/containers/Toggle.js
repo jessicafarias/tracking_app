@@ -25,17 +25,7 @@ const Toggle = () => {
 
     setStyle(style);
     setBackground(background);
-    switch (element) {
-      case 0:
-        setState('Add');
-        break;
-      case 1:
-        setState('Tasks');
-        break;
-      default:
-        setState('Add');
-        break;
-    }
+    setState(element === 0 ? 'Add' : 'Tasks');
   };
 
   return (
@@ -75,7 +65,7 @@ const Toggle = () => {
                   <rect x="47.99" y="42.24" width="3.7" height="14.8" />
                   <rect x="14.69" y="60.74" width="48.1" height="3.7" />
                   <rect x="66.49" y="5.24" width="7.4" height="29.6" />
-                  <rect x="66.49" y="5.24" transform="matrix(6.123234e-17 -1 1 6.123234e-17 50.15 90.23)" className="st1" width="7.4" height="29.6" />
+                  <rect x="66.49" y="5.24" transform="matrix(6.123234e-17 -1 1 6.123234e-17 50.15 90.23)" width="7.4" height="29.6" />
                 </g>
               </svg>
             </div>
