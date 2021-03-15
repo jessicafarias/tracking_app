@@ -11,7 +11,11 @@ import { fetchTasksAction } from '../actions';
 const Tasks = ({ tasks, get }) => {
   useEffect(() => {
     getTasks().then(response => {
+      if (response.message === 'Access token is missing in the request') {
+        window.location.assign('/login');
+      }
       get(response);
+      console.log(response);
     });
   }, []);
   return (
