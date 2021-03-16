@@ -1,5 +1,5 @@
-const loginRequest = async data => {
-  const apiUrl = 'http://localhost:3002/users/sign_in';
+const logoutRequest = async data => {
+  const apiUrl = 'http://localhost:3002/users/sign_out';
   const response = await fetch(apiUrl, {
     method: 'POST',
     mode: 'cors',
@@ -11,4 +11,4 @@ const loginRequest = async data => {
   return response.json();
 };
 
-export default loginRequest;
+export default logoutRequest;

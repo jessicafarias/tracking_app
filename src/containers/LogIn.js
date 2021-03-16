@@ -37,7 +37,6 @@ const Login = ({ tokenUpdate }) => {
     loginRequest(user).then(response => {
       // const token = response.message;
       tokenUpdate(response.message);
-      console.log(response.message);
     });
   };
 

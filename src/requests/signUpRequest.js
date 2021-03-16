@@ -1,5 +1,4 @@
 const signUpRequest = async data => {
-  console.log('sending', data);
   const apiUrl = 'http://localhost:3002/users/sign_up';
   const response = await fetch(apiUrl, {
     method: 'POST',

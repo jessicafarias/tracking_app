@@ -12,7 +12,7 @@ const Toggle = () => {
   );
   const [state, setState] = useState('Add');
 
-  const SetSelected = element => {
+  const SetSelected = (element, goto) => {
     const style = ['', '', '', ''];
     const background = [{ class1: 'st0', class2: 'st1' },
       { class1: 'st0', class2: 'st1' },
@@ -25,7 +25,20 @@ const Toggle = () => {
 
     setStyle(style);
     setBackground(background);
-    setState(element === 0 ? 'Add' : 'Tasks');
+
+    switch (goto) {
+      case 'Add':
+        setState('Add');
+        break;
+      case 'Tasks':
+        setState('Tasks');
+        break;
+      case 'Status':
+        setState('Status');
+        break;
+      default:
+        setState('Add');
+    }
   };
 
   return (
@@ -35,7 +48,7 @@ const Toggle = () => {
       </div>
       <div className="toggle">
         <div className="row w-100 m-0 p-0">
-          <button type="button" onClick={() => SetSelected(0)} className={`col-3 p-2 ${style[0]} `}>
+          <button type="button" onClick={() => SetSelected(0, 'Add')} className={`col-3 p-2 ${style[0]} `}>
             <div>
               <svg
                 version="1.1"
@@ -71,7 +84,7 @@ const Toggle = () => {
             </div>
             <p className="xs">Add task</p>
           </button>
-          <button type="button" onClick={() => SetSelected(1)} className={`col-3 p-2 ${style[1]}`}>
+          <button type="button" onClick={() => SetSelected(1, 'Tasks')} className={`col-3 p-2 ${style[1]}`}>
             <div>
               <svg
                 version="1.1"
@@ -101,7 +114,7 @@ const Toggle = () => {
             </div>
             <p className="xs">Track</p>
           </button>
-          <button type="button" onClick={() => SetSelected(2)} className={`col-3 p-2 ${style[2]}`}>
+          <button type="button" onClick={() => SetSelected(2, 'Status')} className={`col-3 p-2 ${style[2]}`}>
             <div>
               <svg
                 version="1.1"
