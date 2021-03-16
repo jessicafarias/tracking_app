@@ -1,10 +1,9 @@
 const loginRequest = async data => {
-  console.log('sending', data);
   const apiUrl = 'http://localhost:3002/users/sign_in';
   const response = await fetch(apiUrl, {
     method: 'POST',
     mode: 'cors',
-    headers: { 'Content-Type': 'application/json' },
+    headers: { 'Content-Type': 'application/json', Authorization: 'Bearer TOKEN', 'Access-Token': 'Bearer' },
     redirect: 'follow',
     body: JSON.stringify(data),
   });

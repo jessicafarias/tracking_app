@@ -13,3 +13,5 @@ const signUpRequest = async data => {
 };
 
 export default signUpRequest;
+
+//

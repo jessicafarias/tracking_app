@@ -8,14 +8,14 @@ import '../styles/tasks.css';
 import getTasks from '../requests/getTasks';
 import { fetchTasksAction } from '../actions';
 
-const Tasks = ({ tasks, get }) => {
+const Tasks = ({ tasks, get, token }) => {
   useEffect(() => {
-    getTasks().then(response => {
-      if (response.message === 'Access token is missing in the request') {
+    getTasks(token).then(response => {
+      if (response.error === 'Access token is missing in the request'
+      || response.error === 'Invalid access token') {
         window.location.assign('/login');
       }
       get(response);
-      console.log(response);
     });
   }, []);
   return (
@@ -39,6 +39,7 @@ const Tasks = ({ tasks, get }) => {
   );
 };
 const mapStateToProps = state => ({
+  token: state.token,
   tasks: state.tasks,
 });
 
@@ -56,6 +57,7 @@ Tasks.propTypes = {
     progress: PropTypes.number,
   })).isRequired,
   get: PropTypes.func.isRequired,
+  token: PropTypes.string.isRequired,
 };
 
 export default connect(mapStateToProps, mapDispatchToProps)(Tasks);

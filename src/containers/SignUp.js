@@ -43,7 +43,8 @@ const SignUp = () => {
     event.preventDefault();
     const user = {
       email: state.email,
-      password_digest: state.password,
+      password: state.password,
+      password_confirmation: state.password,
       name: state.name,
     };
     signUpRequest(user).then(response => {

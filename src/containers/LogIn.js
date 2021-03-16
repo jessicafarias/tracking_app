@@ -1,8 +1,11 @@
 import { useState } from 'react';
+import { connect } from 'react-redux';
+import PropTypes from 'prop-types';
+import { UpdateTokenAction } from '../actions';
 import loginRequest from '../requests/loginRequest';
 import '../styles/session.css';
 
-const Login = () => {
+const Login = ({ tokenUpdate }) => {
   const [state, setState] = useState(
     {
       email: '',
@@ -32,7 +35,9 @@ const Login = () => {
     };
 
     loginRequest(user).then(response => {
-      console.log(response);
+      // const token = response.message;
+      tokenUpdate(response.message);
+      console.log(response.message);
     });
   };
 
@@ -58,4 +63,14 @@ const Login = () => {
   );
 };
 
-export default Login;
+Login.propTypes = {
+  tokenUpdate: PropTypes.func.isRequired,
+};
+
+const mapDispatchToProps = dispatch => ({
+  tokenUpdate: token => {
+    dispatch(UpdateTokenAction(token));
+  },
+});
+
+export default connect(null, mapDispatchToProps)(Login);
