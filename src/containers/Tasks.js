@@ -8,15 +8,20 @@ import '../styles/tasks.css';
 import getTasks from '../requests/getTasks';
 import { fetchTasksAction } from '../actions';
 
-const Tasks = ({ tasks, get, token }) => {
+const Tasks = ({ tasks, get }) => {
   useEffect(() => {
-    getTasks(token).then(response => {
-      if (response.error === 'Access token is missing in the request'
-      || response.error === 'Invalid access token') {
-        window.location.assign('/login');
-      }
-      get(response);
-    });
+    if (localStorage.getItem('token') !== null) {
+      const token = JSON.parse(localStorage.getItem('token'));
+
+      getTasks(token).then(response => {
+        if (response.error === 'Access token is missing in the request'
+        || response.error === 'Invalid access token') {
+          window.location.assign('/login');
+        } else {
+          get(response);
+        }
+      });
+    }
   }, []);
   return (
     <div>
@@ -33,13 +38,11 @@ const Tasks = ({ tasks, get, token }) => {
             />
           ))}
         </div>
-
       </div>
     </div>
   );
 };
 const mapStateToProps = state => ({
-  token: state.token,
   tasks: state.tasks,
 });
 
@@ -57,7 +60,6 @@ Tasks.propTypes = {
     progress: PropTypes.number,
   })).isRequired,
   get: PropTypes.func.isRequired,
-  token: PropTypes.string.isRequired,
 };
 
 export default connect(mapStateToProps, mapDispatchToProps)(Tasks);

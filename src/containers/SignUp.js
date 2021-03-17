@@ -48,7 +48,10 @@ const SignUp = () => {
       name: state.name,
     };
     signUpRequest(user).then(response => {
-      console.log(response);
+      const token = response.message.toString();
+      console.log(token);
+      localStorage.setItem('token', JSON.stringify(token));
+      console.log(JSON.parse(localStorage.getItem('token')));
     });
   };
 
