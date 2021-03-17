@@ -1,6 +1,6 @@
 import { useState } from 'react';
 import loginRequest from '../requests/loginRequest';
-import '../styles/session.css';
+import 'bootstrap/dist/css/bootstrap.min.css';
 
 const Login = () => {
   const [state, setState] = useState(
@@ -33,9 +33,7 @@ const Login = () => {
 
     loginRequest(user).then(response => {
       const token = response.message.toString();
-      console.log(token);
       localStorage.setItem('token', JSON.stringify(token));
-      console.log(JSON.parse(localStorage.getItem('token')));
       window.location.assign('/');
     });
   };
@@ -45,14 +43,14 @@ const Login = () => {
       <p>LOG IN</p>
       <form>
         <div className="d-flex align-items-center justify-content-center m-auto flex-column pt-2">
-          <label htmlFor="title" className="p-2">
+          <label htmlFor="title" className="p-2 ui input">
             <input placeholder="Username" type="text" id="email" name="email" onChange={handleClick} value={state.email} />
           </label>
-          <label htmlFor="title" className="p-2">
+          <label htmlFor="title" className="p-2 ui input">
             <input placeholder="Password" type="password" id="password" name="password" onChange={handleClick} value={state.password} />
           </label>
           <div className="p-2">
-            <button type="submit" onClick={handleSubmit}> Login</button>
+            <button className="ui primary button" type="submit" onClick={handleSubmit}>Login</button>
           </div>
         </div>
       </form>

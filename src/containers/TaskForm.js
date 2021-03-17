@@ -1,5 +1,5 @@
-import { useState } from 'react';
 import 'semantic-ui-css/semantic.min.css';
+import { useState } from 'react';
 import { Dropdown } from 'semantic-ui-react';
 import Images from '../assets/img';
 import createTaskRequest from '../requests/createTaskRequest';
@@ -69,11 +69,11 @@ const TaskForm = () => {
   };
   return (
     <div>
-      <form>
-        <p className="w-100 text-center">ADD NEW TASK TO DO</p>
-        <div>
-          <label htmlFor="title">
-            <input placeholder="Task (short keyword)" type="name" id="name" name="name" onChange={handleState} value={task.title} />
+      <form className="d-flex flex-column align-items-center justify-content-center">
+        <p className="w-100 text-center mt-5">ADD NEW TASK TO DO</p>
+        <div className="p-4">
+          <label htmlFor="title" className="w-100">
+            <input placeholder="Task (short keyword)" className="w-100" type="name" id="name" name="name" onChange={handleState} value={task.title} />
           </label>
 
           <Dropdown
@@ -82,18 +82,20 @@ const TaskForm = () => {
             placeholder="Select Friend"
             fluid
             selection
+            className="mt-2"
             options={Images}
             onChange={handleState}
           />
-          <label htmlFor="Hours">
-            <input placeholder="Hours" type="number" id="hours" name="hours" onChange={handleState} value={task.hours} />
-          </label>
-          <label htmlFor="Goal">
-            <input placeholder="Goal hours" type="number" id="goal" name="goal" onChange={handleState} value={task.goal} />
+          <label htmlFor="Hours" className="w-100">
+            <input placeholder="Hours" className="w-100 mt-2" type="number" id="hours" name="hours" onChange={handleState} value={task.hours} />
           </label>
 
-          <div>
-            <button type="submit" onClick={handleSubmit}> ADD TASK </button>
+          <label htmlFor="Goal" className="w-100">
+            <input placeholder="Goal hours" className="w-100 mt-2 mb-2" type="number" id="goal" name="goal" onChange={handleState} value={task.goal} />
+          </label>
+
+          <div className="m-auto w-100 pt-3 pb-3">
+            <button className="ui twitter button w-100" type="submit" onClick={handleSubmit}> Create task</button>
           </div>
         </div>
       </form>

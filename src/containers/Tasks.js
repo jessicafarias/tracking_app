@@ -27,7 +27,7 @@ const Tasks = ({ tasks, get }) => {
     <div>
       <div>
         <Date />
-        <Progress show={3} items={tasks} />
+        <Progress items={tasks} />
       </div>
       <div className="bg-tasks">
         <div className="row">

@@ -1,6 +1,6 @@
 import { useState } from 'react';
 import signUpRequest from '../requests/signUpRequest';
-import '../styles/session.css';
+import '../styles/semantic.scss';
 
 const SignUp = () => {
   const [state, setState] = useState(
@@ -49,9 +49,7 @@ const SignUp = () => {
     };
     signUpRequest(user).then(response => {
       const token = response.message.toString();
-      console.log(token);
       localStorage.setItem('token', JSON.stringify(token));
-      console.log(JSON.parse(localStorage.getItem('token')));
     });
   };
 
@@ -60,17 +58,17 @@ const SignUp = () => {
       <form className="h-100 w-100">
         <p className="w-100 text-center pt-5 mt-4">SIGN IN</p>
         <div className="d-flex align-items-center justify-content-center flex-column">
-          <label htmlFor="name" className="p-2">
+          <label htmlFor="name" className="p-2 ui input">
             <input placeholder="Name" type="text" id="name" name="name" onChange={handleClick} value={state.name} />
           </label>
-          <label htmlFor="title" className="p-2">
+          <label htmlFor="title" className="p-2 ui input">
             <input placeholder="Email" type="text" id="email" name="email" onChange={handleClick} value={state.email} />
           </label>
-          <label htmlFor="password" className="p-2">
+          <label htmlFor="password" className="p-2 ui input">
             <input placeholder="Password" type="text" id="password" name="password" onChange={handleClick} value={state.password} />
           </label>
           <div>
-            <button type="submit" onClick={handleSubmit}> Login</button>
+            <button type="submit" className="ui primary button" onClick={handleSubmit}>Sign in</button>
           </div>
         </div>
       </form>

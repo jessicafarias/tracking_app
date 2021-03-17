@@ -4,9 +4,9 @@ import PropTypes from 'prop-types';
 import Carousel from 'react-elastic-carousel';
 import '../styles/progress.css';
 
-const Progress = ({ show, items }) => (
+const Progress = ({ items }) => (
   <div id="big">
-    <Carousel itemsToShow={show}>
+    <Carousel itemsToShow={3}>
       {items.map(item => (
         <div key={item.id} className="big">
           <div className="d-flex justify-content-center align-items-center">
@@ -37,7 +37,6 @@ const Progress = ({ show, items }) => (
 );
 
 Progress.propTypes = {
-  show: PropTypes.number.isRequired,
   items: PropTypes.arrayOf(PropTypes.shape({
     id: PropTypes.number,
     name: PropTypes.string,
