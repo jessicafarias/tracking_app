@@ -23,6 +23,20 @@ const Tasks = ({ tasks, get }) => {
       });
     }
   }, []);
+
+  if (tasks.length === 0) {
+    return (
+      <div className="ui icon message">
+        <i className="notched circle loading icon" />
+        <div className="content">
+          <div className="header">
+            Just one second
+          </div>
+          <p>Loading.</p>
+        </div>
+      </div>
+    );
+  }
   return (
     <div>
       <div>
