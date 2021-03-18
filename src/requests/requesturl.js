@@ -1,2 +1,2 @@
-const baseUrl = 'https://jesapi.herokuapp.com/';
+const baseUrl = 'https://jesapi.herokuapp.com';
 export default baseUrl;
