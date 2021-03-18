@@ -1,6 +1,8 @@
+import baseUrl from './requesturl';
+
 const loginRequest = async data => {
-  const apiUrl = 'http://localhost:3002/users/sign_in';
-  const response = await fetch(apiUrl, {
+  const url = `${baseUrl}/users/sign_in`;
+  const response = await fetch(url, {
     method: 'POST',
     mode: 'cors',
     headers: { 'Content-Type': 'application/json' },

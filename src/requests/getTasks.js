@@ -1,5 +1,7 @@
+import baseUrl from './requesturl';
+
 const getTasks = async (when = '') => {
-  const url = `http://localhost:3002/tasks/${when}`;
+  const url = `${baseUrl}/tasks/${when}`;
 
   const response = await fetch(url, {
     method: 'GET',

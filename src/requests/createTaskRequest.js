@@ -1,5 +1,7 @@
+import baseUrl from './requesturl';
+
 const createTaskRequest = async data => {
-  const url = 'http://localhost:3002/tasks';
+  const url = `${baseUrl}/tasks`;
 
   const response = await fetch(url, {
     method: 'POST',

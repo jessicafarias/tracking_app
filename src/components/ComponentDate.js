@@ -17,7 +17,6 @@ const ComponentDate = ({ items, get }) => {
         || response.error === 'Invalid access token') {
           window.location.assign('/login');
         } else if (response.length === 0) {
-          console.log(response);
           reactDom.render(
             <NoticeError message="You don't have any task created" />,
             document.getElementById('notice').appendChild(document.createElement('DIV')),

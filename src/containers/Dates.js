@@ -25,7 +25,6 @@ const Dates = ({
               document.getElementById('notice').appendChild(document.createElement('DIV')),
             );
           }
-          console.log('entro a yesterday');
           updatetoday(response);
         }
       });

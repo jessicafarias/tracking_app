@@ -1,5 +1,7 @@
+import baseUrl from './requesturl';
+
 const logoutRequest = async data => {
-  const apiUrl = 'http://localhost:3002/users/sign_out';
+  const apiUrl = `${baseUrl}/users/sign_out`;
   const response = await fetch(apiUrl, {
     method: 'POST',
     mode: 'cors',
