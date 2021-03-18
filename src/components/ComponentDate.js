@@ -55,9 +55,9 @@ const mapDispatchToProps = dispatch => ({
 });
 
 ComponentDate.propTypes = {
-  items: PropTypes.shape({
+  items: PropTypes.arrayOf(PropTypes.shape({
     expiration_day: PropTypes.string,
-  }).isRequired,
+  })).isRequired,
   get: PropTypes.func.isRequired,
 };
 

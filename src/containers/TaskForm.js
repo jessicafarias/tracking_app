@@ -107,7 +107,7 @@ const TaskForm = () => {
 
   return (
     <div>
-      <form className="d-flex flex-column align-items-center justify-content-center">
+      <div className="d-flex flex-column align-items-center justify-content-center">
         <p className="w-100 text-center mt-5">ADD NEW TASK TO DO</p>
         <div className="p-4">
           <label htmlFor="title" className="w-100">
@@ -138,7 +138,7 @@ const TaskForm = () => {
             <button className="ui twitter button w-100" type="submit" onClick={handleSubmit}> Create task</button>
           </div>
         </div>
-      </form>
+      </div>
     </div>
   );
 };

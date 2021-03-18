@@ -78,7 +78,11 @@ Tasks.propTypes = {
     progress: PropTypes.number,
   })).isRequired,
   get: PropTypes.func.isRequired,
-  searchDay: PropTypes.string.isRequired,
+  searchDay: PropTypes.string,
+};
+
+Tasks.defaultProps = {
+  searchDay: '',
 };
 
 export default connect(mapStateToProps, mapDispatchToProps)(Tasks);
