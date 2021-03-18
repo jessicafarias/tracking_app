@@ -16,9 +16,9 @@ const Tasks = ({ tasks, get }) => {
 
   useEffect(() => {
     if (!(localStorage.getItem('token') === true || localStorage.getItem('token') === false)) {
-      const token = JSON.parse(localStorage.getItem('token'));
+    // const token = JSON.parse(localStorage.getItem('token'));
 
-      getTasks(token).then(response => {
+      getTasks().then(response => {
         if (response.error === 'Access token is missing in the request'
         || response.error === 'Invalid access token') {
           window.location.assign('/login');

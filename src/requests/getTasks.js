@@ -1,5 +1,5 @@
-const getTasks = async () => {
-  const url = 'http://localhost:3002/tasks';
+const getTasks = async (when = '') => {
+  const url = `http://localhost:3002/tasks/${when}`;
 
   const response = await fetch(url, {
     method: 'GET',
