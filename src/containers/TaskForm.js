@@ -48,29 +48,24 @@ const TaskForm = () => {
     } else {
       setTask({
         name: task.name,
-        img: event.target.firstChild.src,
+        img: event.target.firstChild.src.toString(),
         goal: task.goal,
         time: task.time,
       });
     }
+    console.log(task);
   };
 
   const handleSubmit = event => {
     event.preventDefault();
+    console.log(task);
 
-    const newTask = {
-      name: task.name,
-      img: task.img,
-      goal: task.goal,
-      time: task.time,
-    };
-
-    if (localStorage.getItem('infiniteScrollEnabled') !== null) {
-      createTaskRequest(newTask).then(response => {
+    if (localStorage.getItem('token') !== null) {
+      createTaskRequest(task).then(response => {
         console.log(response);
         if (response.status === 'error') {
           reactDom.render(
-            <NoticeError />,
+            <NoticeError message="Please log in to admin your tasks" />,
             document.getElementById('notice').appendChild(document.createElement('DIV')),
           );
         }
@@ -94,7 +89,7 @@ const TaskForm = () => {
           <Dropdown
             id="drop"
             name="drop"
-            placeholder="Select Friend"
+            placeholder="Choose an image"
             fluid
             selection
             className="mt-2"

@@ -9,9 +9,10 @@ import '../styles/tasks.css';
 import getTasks from '../requests/getTasks';
 import { fetchTasksAction } from '../actions';
 import NoticeError from '../components/NoticeError';
+import Loading from '../components/loading';
 
 const Tasks = ({ tasks, get }) => {
-  const [loading, setLoading] = useState(true);
+  const [load, setLoading] = useState(true);
 
   useEffect(() => {
     if (!(localStorage.getItem('token') === true || localStorage.getItem('token') === false)) {
@@ -27,27 +28,18 @@ const Tasks = ({ tasks, get }) => {
               <NoticeError message="You don't have any task created" />,
               document.getElementById('notice').appendChild(document.createElement('DIV')),
             );
-            get(response);
           }
           setTimeout(() => {
             setLoading(false);
+            get(response);
           }, 2000);
         }
       });
     }
   }, []);
-
-  if (tasks.length === 0 && loading) {
+  if (tasks.length === 0 && load) {
     return (
-      <div className="ui icon message">
-        <i className="notched circle loading icon" />
-        <div className="content">
-          <div className="header">
-            Just one second
-          </div>
-          <p>Loading.</p>
-        </div>
-      </div>
+      <Loading display={load} />
     );
   }
   return (
@@ -69,6 +61,7 @@ const Tasks = ({ tasks, get }) => {
     </div>
   );
 };
+
 const mapStateToProps = state => ({
   tasks: state.tasks,
 });
