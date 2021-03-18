@@ -59,7 +59,7 @@ const SignUp = () => {
     }).catch(
       () => {
         reactDom.render(
-          <NoticeError message="This email is already taken" />,
+          <NoticeError message="Wrong parameters" />,
           document.getElementById('notice').appendChild(document.createElement('DIV')),
         );
       },

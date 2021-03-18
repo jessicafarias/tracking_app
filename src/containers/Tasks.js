@@ -1,5 +1,5 @@
 import PropTypes from 'prop-types';
-import { useEffect } from 'react';
+import { useEffect, useState } from 'react';
 import reactDom from 'react-dom';
 import { connect } from 'react-redux';
 import Date from '../components/Date';
@@ -11,6 +11,8 @@ import { fetchTasksAction } from '../actions';
 import NoticeError from '../components/NoticeError';
 
 const Tasks = ({ tasks, get }) => {
+  const [loading, setLoading] = useState(true);
+
   useEffect(() => {
     if (!(localStorage.getItem('token') === true || localStorage.getItem('token') === false)) {
       const token = JSON.parse(localStorage.getItem('token'));
@@ -25,14 +27,17 @@ const Tasks = ({ tasks, get }) => {
               <NoticeError message="You don't have any task created" />,
               document.getElementById('notice').appendChild(document.createElement('DIV')),
             );
+            get(response);
           }
-          get(response);
+          setTimeout(() => {
+            setLoading(false);
+          }, 2000);
         }
       });
     }
   }, []);
 
-  if (tasks.length === 0) {
+  if (tasks.length === 0 && loading) {
     return (
       <div className="ui icon message">
         <i className="notched circle loading icon" />

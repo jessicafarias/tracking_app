@@ -18,3 +18,15 @@
   margin: 0;
   width: 100vw;
 }
+
+.nolink {
+  color: white;
+  font-weight: bolder;
+  cursor: pointer;
+}
+
+.nolink:hover{
+  color: white;
+  font-weight: bolder;
+  cursor: pointer;
+}
