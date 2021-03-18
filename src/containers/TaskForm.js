@@ -1,5 +1,5 @@
 import 'semantic-ui-css/semantic.min.css';
-import { Dropdown } from 'semantic-ui-react';
+import { Form } from 'semantic-ui-react';
 import { useState } from 'react';
 import reactDom from 'react-dom';
 import Images from '../assets/img';
@@ -14,8 +14,25 @@ const TaskForm = () => {
     time: 0,
   });
 
+  const [droper, setdroper] = useState(
+    { content: 'Please select an image', pointing: 'below' },
+  );
+
+  const handleViewErrors = () => {
+    if (task.img === '') {
+      setdroper(
+        { content: 'Please select an image', pointing: 'below' },
+      );
+    } else {
+      setdroper(
+        false,
+      );
+    }
+  };
+
   const handleState = event => {
     event.preventDefault();
+    handleViewErrors();
     if (event.target.id !== '') {
       switch (event.target.name) {
         case 'name':
@@ -53,22 +70,32 @@ const TaskForm = () => {
         time: task.time,
       });
     }
-    console.log(task);
   };
 
   const handleSubmit = event => {
     event.preventDefault();
-    console.log(task);
 
     if (localStorage.getItem('token') !== null) {
       createTaskRequest(task).then(response => {
-        console.log(response);
+        [response].forEach(
+          obj => {
+            reactDom.render(
+              <NoticeError message={Object.entries(obj).flat().toString().replace(',', ' ')} />,
+              document.getElementById('notice').appendChild(document.createElement('DIV')),
+            );
+          },
+        );
         if (response.status === 'error') {
           reactDom.render(
             <NoticeError message="Please log in to admin your tasks" />,
             document.getElementById('notice').appendChild(document.createElement('DIV')),
           );
         }
+      }).catch(() => {
+        reactDom.render(
+          <NoticeError message="Something went wrong try again latter" />,
+          document.getElementById('notice').appendChild(document.createElement('DIV')),
+        );
       });
     } else {
       reactDom.render(
@@ -77,6 +104,7 @@ const TaskForm = () => {
       );
     }
   };
+
   return (
     <div>
       <form className="d-flex flex-column align-items-center justify-content-center">
@@ -85,17 +113,19 @@ const TaskForm = () => {
           <label htmlFor="title" className="w-100">
             <input placeholder="Task (short keyword)" className="w-100" type="name" id="name" name="name" onChange={handleState} value={task.title} />
           </label>
-
-          <Dropdown
-            id="drop"
-            name="drop"
-            placeholder="Choose an image"
-            fluid
-            selection
-            className="mt-2"
-            options={Images}
-            onChange={handleState}
-          />
+          <Form>
+            <Form.Dropdown
+              id="drop"
+              name="drop"
+              error={droper}
+              placeholder="Choose an image"
+              fluid
+              selection
+              className="mt-2"
+              options={Images}
+              onChange={handleState}
+            />
+          </Form>
           <label htmlFor="Hours" className="w-100">
             <input placeholder="Hours" className="w-100 mt-2" type="number" id="hours" name="hours" onChange={handleState} value={task.hours} />
           </label>

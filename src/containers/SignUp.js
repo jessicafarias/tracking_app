@@ -50,7 +50,6 @@ const SignUp = () => {
       name: state.name,
     };
     signUpRequest(user).then(response => {
-      console.log(response);
       const token = response.message.toString();
       localStorage.setItem('token', JSON.stringify(token));
       if (response.status === 'success') {
@@ -59,7 +58,7 @@ const SignUp = () => {
     }).catch(
       () => {
         reactDom.render(
-          <NoticeError message="Wrong parameters" />,
+          <NoticeError message="Wrong fields, check again" />,
           document.getElementById('notice').appendChild(document.createElement('DIV')),
         );
       },
@@ -78,7 +77,7 @@ const SignUp = () => {
             <input placeholder="Email" type="text" id="email" name="email" onChange={handleClick} value={state.email} />
           </label>
           <label htmlFor="password" className="p-2 ui input">
-            <input placeholder="Password" type="text" id="password" name="password" onChange={handleClick} value={state.password} />
+            <input placeholder="Password" type="password" id="password" name="password" onChange={handleClick} value={state.password} />
           </label>
           <div>
             <button type="submit" className="ui primary button" onClick={handleSubmit}>Sign in</button>
