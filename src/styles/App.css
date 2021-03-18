@@ -1,5 +1,7 @@
 .view {
-  min-height: 80vh;
+  height: 80vh;
+  overflow-y: scroll;
+  overflow-x: hidden;
 }
 
 @keyframes App-logo-spin {

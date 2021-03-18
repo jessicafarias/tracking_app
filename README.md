@@ -1,70 +1,133 @@
-# Getting Started with Create React App
+# Tracking app
+Tracking your time
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
-## Available Scripts
+[![Contributors][contributors-shield]][contributors-url]
+[![Forks][forks-shield]][forks-url]
+[![Stargazers][stars-shield]][stars-url]
+[![Issues][issues-shield]][issues-url]
 
-In the project directory, you can run:
+<!-- PROJECT LOGO -->
+  <h3 align="center">Track</h3>
 
-### `npm start`
+  <p align="center">
+    This project is created with the porpuse of register and tracking the time invested on diferent tasks. The UI has diferent interactive elements like a toogle, a funcional carousel to see the task. Also the login/logout is implemented using tokens so fell free to use any password it will be encripted.<br /></p>
+    <h2 align="center">SCREENSHOTS</h2>
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
+  <p align="center">
+      <img alt="Light" src="./public/list.png" width="30%">
+  &nbsp; &nbsp; &nbsp; &nbsp;
+    <img alt="Dark" src="./public/details.png" width="30%">
+  </p>
 
-The page will reload if you make edits.\
-You will also see any lint errors in the console.
+  <p align="center">
+    <img alt="Dark" src="./public/signup.png" width="30%">
+  &nbsp; &nbsp; &nbsp; &nbsp;
+      <img alt="Light" src="./public/create.png" width="30%">
+  </p>
 
-### `npm test`
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+<!-- ABOUT THE PROJECT -->
 
-### `npm run build`
+## Live Demo
+It's deployed [here](https://reverent-yonath-202d37.netlify.app) on netlify
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+### Built With
+This project was built using these technologies.
+* React
+* JavaScript
+* GitHub
+* Redux
+* Eslint
+* Stylelint
+* VScode
+* Jest
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+### Getting Started
 
-### `npm run eject`
+To get a local copy up and running follow these simple example steps.
 
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
+### Prerequisites
 
-If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+ * [Node.js](https://nodejs.org/) is required to install dependencies and run scripts via npm.
+ * A modern browser
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
+### Clone
+* Clone this repo:
+  - Clone with SSH:
+  ```
+    git@github.com:jessicafarias/tracking_app.git
+  ```
+  - Clone with HTTPS
+  ```
+    https://github.com/jessicafarias/tracking_app.git
+  ```
+  - Clone with GitHub CLI
+  ```
+    gh repo clone jessicafarias/tracking_app.git
+    
+ - cd to tracking_app.git
 
-You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
 
-## Learn More
+### Setup
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+Install dependencies:
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+```
+$ npm install
+```
 
-### Code Splitting
+Start the local webserver:
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
+```$ npm start``` will open the project at local webserver at http://localhost:3000/ 
 
-### Analyzing the Bundle Size
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
+## Authors
 
-### Making a Progressive Web App
+## 👤 Jessica Michelle Farías Rosado:
+Working as a FullStack developer on this project.
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
+ [![Website](https://img.shields.io/badge/-Website-black?style=for-the-badge&logo=Julia&logoColor=white)](https://jessicafarias.github.io/)
 
-### Advanced Configuration
+ [![LINKEDIN](https://img.shields.io/badge/-LINKEDIN-0077B5?style=for-the-badge&logo=Linkedin&logoColor=white)](https://www.linkedin.com/in/jessica-michelle-farias-rosado/)
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
+ [![EMAIL](https://img.shields.io/badge/-EMAIL-D14836?style=for-the-badge&logo=Mail.Ru&logoColor=white)](mailto:jessica.farias.rosado@gmail.com)
+ 
+ [![TWITTER](https://img.shields.io/badge/-TWITTER-1DA1F2?style=for-the-badge&logo=Twitter&logoColor=white)](https://twitter.com/FariasRosado)
 
-### Deployment
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
+## 👤 Gregoire Vella
+A special thanks is expressed to Marc Roy for the design.
+This is design will not use as a comercial purpose
+- [Work](https://www.behance.net/gallery/13271423/Bodytrackit-An-iOs-app-Branding-UX-and-UI)
+- [Grego](https://www.behance.net/gregoirevella)
 
-### `npm run build` fails to minify
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+## 🤝 Contributing
+
+Contributions, issues and feature requests are welcome!
+
+Feel free to check the [issues page](https://github.com/jessicafarias/tracking_app/issues).
+
+## Show your support
+
+Give a :star: if you like this project!
+
+
+
+<!-- MARKDOWN LINKS & IMAGES -->
+<!-- https://www.markdownguide.org/basic-syntax/#reference-style-links -->
+[contributors-shield]: https://img.shields.io/github/contributors/jessicafarias/tracking_app.svg?style=flat-square
+[contributors-url]: https://github.com/jessicafarias/tracking_app/graphs/contributors
+[forks-shield]: https://img.shields.io/github/forks/jessicafarias/tracking_app.svg?style=flat-square
+[forks-url]: https://github.com/jessicafarias/tracking_app/network/members
+[stars-shield]: https://img.shields.io/github/stars/jessicafarias/tracking_app.svg?style=flat-square
+[stars-url]: https://github.com/jessicafarias/tracking_app/stargazers
+[issues-shield]: https://img.shields.io/github/issues/jessicafarias/tracking_app.svg?style=flat-square
+[issues-url]: https://github.com/jessicafarias/tracking_app/issues
+
+## 📝 License
+
+This project is [MIT](https://opensource.org/licenses/MIT) licensed.
+

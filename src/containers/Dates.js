@@ -10,13 +10,7 @@ import getTasks from '../requests/getTasks';
 const Dates = ({
   today, updatetoday, yesterday, updateYesterday,
 }) => {
-  const tasks = [{
-    name: 'nameoftask',
-    expiration_day: '10-12-15',
-    progress: 30,
-    time: 1,
-    goal: 3,
-  }];
+  const tasks = [];
 
   useEffect(() => {
     if (!(localStorage.getItem('token') === true || localStorage.getItem('token') === false)) {
@@ -27,7 +21,7 @@ const Dates = ({
         } else {
           if (response.length === 0) {
             reactDom.render(
-              <NoticeError message="You don't have any task created" />,
+              <NoticeError message="You don't have any task for today" />,
               document.getElementById('notice').appendChild(document.createElement('DIV')),
             );
           }
@@ -41,13 +35,6 @@ const Dates = ({
         || response.error === 'Invalid access token') {
           window.location.assign('/login');
         } else {
-          if (response.length === 0) {
-            reactDom.render(
-              <NoticeError message="You don't have any task created" />,
-              document.getElementById('notice').appendChild(document.createElement('DIV')),
-            );
-          }
-          console.log('entro a yesterday');
           updateYesterday(response);
         }
       });
