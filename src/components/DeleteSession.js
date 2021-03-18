@@ -1,9 +1,7 @@
 const DeleteSession = () => {
-  const token = JSON.parse(localStorage.getItem('token'));
+  const token = localStorage.getItem('token');
 
-  if (token !== '') {
-    localStorage.setItem('token', JSON.stringify(null));
-    window.location.assign('/');
+  if (token !== null && (token.length > 10)) {
     return (
       <a href="/login">
         <i className="sign out alternate icon" />

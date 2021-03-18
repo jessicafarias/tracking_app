@@ -16,6 +16,7 @@ function App() {
     <>
       <Header />
       <section className="view">
+        <div id="notice" />
         <BrowserRouter>
           <Switch>
             <Provider store={store}>

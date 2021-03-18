@@ -3,15 +3,11 @@ import Dates from './Dates';
 import Tasks from './Tasks';
 import TaskForm from './TaskForm';
 import UpdateForm from './UpdateForm';
-import NoticeLogin from '../components/NoticeLogin';
 
 const Display = ({ toggle }) => {
   if (toggle === 'Add') {
     return (
-      <>
-        <NoticeLogin />
-        <TaskForm />
-      </>
+      <TaskForm />
     );
   }
   if (toggle === 'Tasks') {

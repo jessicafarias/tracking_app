@@ -1,7 +1,9 @@
 import 'semantic-ui-css/semantic.min.css';
-import { useState } from 'react';
 import { Dropdown } from 'semantic-ui-react';
+import { useState } from 'react';
+import reactDom from 'react-dom';
 import Images from '../assets/img';
+import NoticeError from '../components/NoticeError';
 import createTaskRequest from '../requests/createTaskRequest';
 
 const TaskForm = () => {
@@ -63,9 +65,22 @@ const TaskForm = () => {
       time: task.time,
     };
 
-    createTaskRequest(newTask).then(response => {
-      console.log('response', response);
-    });
+    if (localStorage.getItem('infiniteScrollEnabled') !== null) {
+      createTaskRequest(newTask).then(response => {
+        console.log(response);
+        if (response.status === 'error') {
+          reactDom.render(
+            <NoticeError />,
+            document.getElementById('notice').appendChild(document.createElement('DIV')),
+          );
+        }
+      });
+    } else {
+      reactDom.render(
+        <NoticeError message="Please log in to create a new task" />,
+        document.getElementById('notice').appendChild(document.createElement('DIV')),
+      );
+    }
   };
   return (
     <div>

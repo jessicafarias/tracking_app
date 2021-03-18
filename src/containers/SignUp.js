@@ -1,4 +1,6 @@
 import { useState } from 'react';
+import reactDom from 'react-dom';
+import NoticeError from '../components/NoticeError';
 import signUpRequest from '../requests/signUpRequest';
 import '../styles/semantic.scss';
 
@@ -48,9 +50,20 @@ const SignUp = () => {
       name: state.name,
     };
     signUpRequest(user).then(response => {
+      console.log(response);
       const token = response.message.toString();
       localStorage.setItem('token', JSON.stringify(token));
-    });
+      if (response.status === 'success') {
+        window.location.assign('/');
+      }
+    }).catch(
+      () => {
+        reactDom.render(
+          <NoticeError message="This email is already taken" />,
+          document.getElementById('notice').appendChild(document.createElement('DIV')),
+        );
+      },
+    );
   };
 
   return (

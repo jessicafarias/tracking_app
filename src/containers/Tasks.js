@@ -1,5 +1,6 @@
 import PropTypes from 'prop-types';
 import { useEffect } from 'react';
+import reactDom from 'react-dom';
 import { connect } from 'react-redux';
 import Date from '../components/Date';
 import Progress from '../components/Progess';
@@ -7,10 +8,11 @@ import Task from '../components/task';
 import '../styles/tasks.css';
 import getTasks from '../requests/getTasks';
 import { fetchTasksAction } from '../actions';
+import NoticeError from '../components/NoticeError';
 
 const Tasks = ({ tasks, get }) => {
   useEffect(() => {
-    if (localStorage.getItem('token') !== null) {
+    if (!(localStorage.getItem('token') === true || localStorage.getItem('token') === false)) {
       const token = JSON.parse(localStorage.getItem('token'));
 
       getTasks(token).then(response => {
@@ -18,6 +20,12 @@ const Tasks = ({ tasks, get }) => {
         || response.error === 'Invalid access token') {
           window.location.assign('/login');
         } else {
+          if (response.length === 0) {
+            reactDom.render(
+              <NoticeError message="You don't have any task created" />,
+              document.getElementById('notice').appendChild(document.createElement('DIV')),
+            );
+          }
           get(response);
         }
       });

@@ -1,6 +1,8 @@
+import reactDom from 'react-dom';
 import { useState } from 'react';
 import loginRequest from '../requests/loginRequest';
 import 'bootstrap/dist/css/bootstrap.min.css';
+import NoticeError from '../components/NoticeError';
 
 const Login = () => {
   const [state, setState] = useState(
@@ -32,10 +34,24 @@ const Login = () => {
     };
 
     loginRequest(user).then(response => {
-      const token = response.message.toString();
-      localStorage.setItem('token', JSON.stringify(token));
-      window.location.assign('/');
-    });
+      if (response.status === 'error') {
+        reactDom.render(
+          <NoticeError message="Wrong password or email" />,
+          document.getElementById('notice').appendChild(document.createElement('DIV')),
+        );
+      } else {
+        const token = response.message.toString();
+        localStorage.setItem('token', JSON.stringify(token));
+        window.location.assign('/');
+      }
+    }).catch(
+      () => {
+        reactDom.render(
+          <NoticeError message="Network Error" />,
+          document.getElementById('notice').appendChild(document.createElement('DIV')),
+        );
+      },
+    );
   };
 
   return (
