@@ -2,7 +2,7 @@ import PropTypes from 'prop-types';
 import { useEffect, useState } from 'react';
 import reactDom from 'react-dom';
 import { connect } from 'react-redux';
-import Date from '../components/Date';
+import ComponentDate from '../components/ComponentDate';
 import Progress from '../components/Progess';
 import Task from '../components/task';
 import '../styles/tasks.css';
@@ -11,14 +11,12 @@ import { fetchTasksAction } from '../actions';
 import NoticeError from '../components/NoticeError';
 import Loading from '../components/loading';
 
-const Tasks = ({ tasks, get }) => {
+const Tasks = ({ tasks, get, searchDay }) => {
   const [load, setLoading] = useState(true);
 
   useEffect(() => {
     if (!(localStorage.getItem('token') === true || localStorage.getItem('token') === false)) {
-    // const token = JSON.parse(localStorage.getItem('token'));
-
-      getTasks().then(response => {
+      getTasks(searchDay).then(response => {
         if (response.error === 'Access token is missing in the request'
         || response.error === 'Invalid access token') {
           window.location.assign('/login');
@@ -32,7 +30,7 @@ const Tasks = ({ tasks, get }) => {
           setTimeout(() => {
             setLoading(false);
             get(response);
-          }, 2000);
+          }, 1500);
         }
       });
     }
@@ -45,7 +43,7 @@ const Tasks = ({ tasks, get }) => {
   return (
     <div>
       <div>
-        <Date />
+        <ComponentDate day={searchDay} />
         <Progress items={tasks} />
       </div>
       <div className="bg-tasks">
@@ -80,6 +78,7 @@ Tasks.propTypes = {
     progress: PropTypes.number,
   })).isRequired,
   get: PropTypes.func.isRequired,
+  searchDay: PropTypes.string.isRequired,
 };
 
 export default connect(mapStateToProps, mapDispatchToProps)(Tasks);
