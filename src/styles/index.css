@@ -6,15 +6,29 @@ body {
   margin: 0;
   height: 100vh;
   overflow-x: hidden;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
+  font-family:
+    -apple-system,
+    BlinkMacSystemFont,
+    'Segoe UI',
+    'Roboto',
+    'Oxygen',
+    'Ubuntu',
+    'Cantarell',
+    'Fira Sans',
+    'Droid Sans',
+    'Helvetica Neue',
     sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
 
 code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
+  font-family:
+    source-code-pro,
+    Menlo,
+    Monaco,
+    Consolas,
+    'Courier New',
     monospace;
 }
 
@@ -37,32 +51,32 @@ code {
 }
 
 .font-xs {
-  font-family: 'HLight','Courier New', Courier, monospace;
+  font-family: 'HLight', 'Courier New', Courier, monospace;
   font-size: x-small;
   color: grey;
   padding: 0;
 }
 
 .font-sm {
-  font-family: 'HLight','Courier New', Courier, monospace;
+  font-family: 'HLight', 'Courier New', Courier, monospace;
   font-size: small;
   color: grey;
 }
 
 .font-md {
-  font-family: 'HLight','Courier New', Courier, monospace;
+  font-family: 'HLight', 'Courier New', Courier, monospace;
   font-size: medium;
   color: rgb(105, 105, 105);
 }
 
 .font-md-regular {
-  font-family: 'HRegular','Courier New', Courier, monospace;
+  font-family: 'HRegular', 'Courier New', Courier, monospace;
   font-size: medium;
   color: rgb(54, 54, 54);
 }
 
 .font-sm-regular {
-  font-family: 'HRegular','Courier New', Courier, monospace;
+  font-family: 'HRegular', 'Courier New', Courier, monospace;
   font-size: small;
   color: rgb(54, 54, 54);
 }
@@ -78,4 +92,3 @@ code {
   font-weight: bold;
   color: #494949;
 }
-

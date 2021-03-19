@@ -1,10 +1,11 @@
-button.rec-dot{
-  background-color: rgba(16, 235, 199, 0.596);
+button.rec-dot {
   box-shadow: none;
   display: none;
 }
 
-button.rec-dot:hover, button.rec-dot:active, button.rec-dot:focus  {
+button.rec-dot:hover,
+button.rec-dot:active,
+button.rec-dot:focus {
   box-shadow: 0 0 1px 3px rgba(235, 240, 240, 0.219);
 }
 
@@ -20,7 +21,6 @@ button.rec-dot:hover, button.rec-dot:active, button.rec-dot:focus  {
 
 .rec.rec-arrow:hover {
   background: none;
-  background-color: none !important;
   box-shadow: none !important;
 }
 
@@ -28,21 +28,20 @@ button.rec-dot:hover, button.rec-dot:active, button.rec-dot:focus  {
   background: none;
   box-shadow: none;
 }
-.lgksPe{
-  scale: 60% !important;
-  margin: 5px o !important;
+
+.lgksPe {
+  margin: 5px 0 !important;
 }
 
-.iLquPE:disabled{
-  scale: 60% !important;
+.iLquPE:disabled {
   color: rgb(211, 211, 211);
 }
 
-.lgksPe:hover:enabled, .lgksPe:focus:enabled {
+.lgksPe:hover:enabled,
+.lgksPe:focus:enabled {
   background: none !important;
-  box-shadow:  none !important;
+  box-shadow: none !important;
   color: #41b5e8 !important;
-  scale: 60%;
 }
 
 .rec-carousel-item:focus {

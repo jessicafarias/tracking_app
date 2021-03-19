@@ -1,26 +1,35 @@
-.st1{fill:#212935;}
-.st5{fill:#FFFFFF;}
+.st0 {
+  fill: #afb3b7;
+  stroke: #212935;
+  stroke-width: 5;
+  stroke-miterlimit: 10;
+}
+.st1 { fill: #ced1d2; }
 
-.st0{fill:#AFB3B7;stroke:#212935;stroke-width:5;stroke-miterlimit:10;}
-.st1{fill:#CED1D2;}
-.st2{fill:#ffffff;stroke:#0c8fa0;stroke-width:5;stroke-miterlimit:10;}
-.st3{fill:#ffffff;}
+.st2 {
+  fill: #fff;
+  stroke: #0c8fa0;
+  stroke-width: 5;
+  stroke-miterlimit: 10;
+}
+.st3 { fill: #fff; }
 
-button{
+button {
   border: none;
   background-color: #313944;
-  color:white;
+  color: white;
   padding: 5px;
 }
+
 .selected {
-  background-color: #65C2EC;
+  background-color: #65c2ec;
 }
 
-.xs{
+.xs {
   font-size: xx-small;
 }
 
-.svg-icon{
+.svg-icon {
   height: 32px;
   max-width: 32px;
 }
@@ -31,5 +40,3 @@ button{
   right: 0;
   width: 100%;
 }
-
-

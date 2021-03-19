@@ -2,7 +2,7 @@
   height: 80vh;
   overflow-y: scroll;
   overflow-x: hidden;
-  width: 100;
+  width: 100%;
   margin: auto;
 }
 
@@ -10,6 +10,7 @@
   from {
     transform: rotate(0deg);
   }
+
   to {
     transform: rotate(360deg);
   }

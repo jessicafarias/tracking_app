@@ -25,7 +25,7 @@
   cursor: pointer;
 }
 
-.nolink:hover{
+.nolink:hover {
   color: white;
   font-weight: bolder;
   cursor: pointer;
