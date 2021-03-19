@@ -30,7 +30,7 @@ Tracking your time
 <!-- ABOUT THE PROJECT -->
 
 ## Live Demo
-It's deployed [here](https://reverent-yonath-202d37.netlify.app) on netlify
+It's deployed [here](https://vigorous-minsky-e3bf16.netlify.app/) on netlify
 
 ### Built With
 This project was built using these technologies.

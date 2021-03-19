@@ -2,6 +2,8 @@
   height: 80vh;
   overflow-y: scroll;
   overflow-x: hidden;
+  width: 100;
+  margin: auto;
 }
 
 @keyframes App-logo-spin {
