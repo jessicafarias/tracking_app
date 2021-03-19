@@ -30,7 +30,7 @@ const Tasks = ({ tasks, get, searchDay }) => {
           setTimeout(() => {
             setLoading(false);
             get(response);
-          }, 1500);
+          }, 2100);
         }
       });
     }
