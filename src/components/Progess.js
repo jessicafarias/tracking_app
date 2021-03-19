@@ -8,8 +8,8 @@ const Progress = ({ items }) => (
   <div id="big">
     <Carousel itemsToShow={3}>
       {items.map(item => (
-        <div key={item.id} className="big">
-          <div className="d-flex justify-content-center align-items-center">
+        <div key={item.id} className="w-100 sizeprogress">
+          <div className="d-flex justify-content-center align-items-center w-100">
             <svg viewBox="0 0 36 36" className="circular-chart blue pl-3 pr-3 pb-2">
               <path
                 className="circle-bg w-100"
