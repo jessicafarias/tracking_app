@@ -15,7 +15,7 @@ function App() {
   return (
     <>
       <Header />
-      <section className="view">
+      <section>
         <div id="notice" />
         <BrowserRouter>
           <Switch>
