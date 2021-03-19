@@ -19,6 +19,7 @@ button.rec-dot:focus {
   box-shadow: none;
 }
 
+
 .rec.rec-arrow:hover {
   background: none;
   box-shadow: none !important;

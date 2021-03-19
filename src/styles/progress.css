@@ -1,6 +1,13 @@
 #big > .rec-carousel-wrapper > .galrjd {
-  width: 140% !important;
+  width: 100% !important;
   overflow-x: hidden;
+}
+
+#big > .rec-carousel-wrapper > .galrjd > .iLquPE {
+  border: none;
+  background: none;
+  box-shadow: none;
+  display: none;
 }
 
 .percentage {
