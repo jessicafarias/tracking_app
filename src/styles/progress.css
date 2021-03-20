@@ -1,5 +1,5 @@
 #big > .rec-carousel-wrapper > .galrjd {
-  width: 100% !important;
+  width: 110% !important;
   overflow-x: hidden;
 }
 
@@ -7,7 +7,13 @@
   border: none;
   background: none;
   box-shadow: none;
-  display: none;
+  display: none !important;
+  visibility: hidden !important;
+}
+
+#big button {
+  display: none !important;
+  visibility: hidden !important;
 }
 
 .percentage {

@@ -19,7 +19,6 @@ button.rec-dot:focus {
   box-shadow: none;
 }
 
-
 .rec.rec-arrow:hover {
   background: none;
   box-shadow: none !important;
@@ -48,4 +47,12 @@ button.rec-dot:focus {
 .rec-carousel-item:focus {
   outline: none;
   box-shadow: inset 0 0 1px 1px lightgrey;
+}
+
+#big > .rec-carousel-wrapper > .galrjd > .iLquPE {
+  border: none;
+  background: none;
+  box-shadow: none;
+  display: none !important;
+  visibility: hidden !important;
 }

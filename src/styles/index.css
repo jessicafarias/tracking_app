@@ -92,3 +92,8 @@ code {
   font-weight: bold;
   color: #494949;
 }
+
+#big button {
+  display: none !important;
+  visibility: hidden !important;
+}

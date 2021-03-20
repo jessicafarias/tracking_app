@@ -131,7 +131,7 @@ const TaskForm = () => {
           </label>
 
           <label htmlFor="Goal" className="w-100">
-            <input placeholder="Goal hours" className="w-100 mt-2 mb-2" type="number" id="goal" name="goal" onChange={handleState} value={task.goal} />
+            <input placeholder="Goal" className="w-100 mt-2" type="number" id="goal" name="goal" onChange={handleState} value={task.goal} />
           </label>
 
           <div className="m-auto w-100 pt-3 pb-3">
