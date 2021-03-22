@@ -1,6 +1,6 @@
 import 'semantic-ui-css/semantic.min.css';
 import { Form } from 'semantic-ui-react';
-import { useState } from 'react';
+import { useEffect, useState } from 'react';
 import reactDom from 'react-dom';
 import Images from '../assets/img';
 import NoticeError from '../components/NoticeError';
@@ -30,9 +30,12 @@ const TaskForm = () => {
     }
   };
 
+  useEffect(() => {
+    handleViewErrors();
+  }, [task]);
+
   const handleState = event => {
     event.preventDefault();
-    handleViewErrors();
     if (event.target.id !== '') {
       switch (event.target.name) {
         case 'name':

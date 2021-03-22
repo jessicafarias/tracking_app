@@ -85,7 +85,7 @@ const SignUp = () => {
         </div>
       </form>
       <div className="m-auto d-flex justify-content-center p-3">
-        <a href="/logIn" className="text-center">Log in</a>
+        <a href="/logIn" className="text-center">sign up</a>
       </div>
     </div>
   );
