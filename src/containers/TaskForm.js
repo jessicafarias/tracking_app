@@ -5,6 +5,7 @@ import reactDom from 'react-dom';
 import Images from '../assets/img';
 import NoticeError from '../components/NoticeError';
 import createTaskRequest from '../requests/createTaskRequest';
+import DatePicker from '../components/DatePicker';
 
 const TaskForm = () => {
   const [task, setTask] = useState({
@@ -128,6 +129,7 @@ const TaskForm = () => {
               options={Images}
               onChange={handleState}
             />
+            <DatePicker />
           </Form>
           <label htmlFor="Hours" className="w-100">
             <input placeholder="Hours" className="w-100 mt-2" type="number" id="hours" name="hours" onChange={handleState} value={task.hours} />
