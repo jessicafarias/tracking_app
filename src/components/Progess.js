@@ -3,16 +3,10 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import Carousel from 'react-elastic-carousel';
 import '../styles/progress.css';
-const breakPoints = [
-  { width: 1, itemsToShow: 1 },
-  { width: 550, itemsToShow: 2, itemsToScroll: 2 },
-  { width: 768, itemsToShow: 3 },
-  { width: 1200, itemsToShow: 4 },
-  { width: 1600, itemsToShow: 6 }
-];
+
 const Progress = ({ items }) => (
   <div id="big">
-    <Carousel itemsToShow={breakPoints}>
+    <Carousel itemsToShow={3}>
       {items.map(item => (
         <div key={item.id} className="w-100 sizeprogress">
           <div className="d-flex justify-content-center align-items-center w-100">

@@ -1,14 +1,22 @@
 import SemanticDatepicker from 'react-semantic-ui-datepickers';
-import { useState } from 'react';
-
+import PropTypes from 'prop-types';
 import 'react-semantic-ui-datepickers/dist/react-semantic-ui-datepickers.css';
+import { Label } from 'semantic-ui-react';
 
-const DatePicker = () => {
-  const [currentDate, setNewDate] = useState(null);
-  const onChange = (event, data) => setNewDate(data.value);
-  console.log(currentDate);
+const DatePicker = ({ handleDate }) => (
+  <>
+    <SemanticDatepicker
+      id="id"
+      name="DATEPICKER"
+      onChange={handleDate}
+    />
+    <Label as="a" color="teal" tag title="You gonna start to track starting today until expiration day">
+      Expiration day
+    </Label>
+  </>
+);
 
-  return <SemanticDatepicker onChange={onChange} />;
+DatePicker.propTypes = {
+  handleDate: PropTypes.func.isRequired,
 };
-
 export default DatePicker;

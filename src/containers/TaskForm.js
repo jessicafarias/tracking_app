@@ -1,5 +1,5 @@
 import 'semantic-ui-css/semantic.min.css';
-import { Form } from 'semantic-ui-react';
+import { Form, Label } from 'semantic-ui-react';
 import { useEffect, useState } from 'react';
 import reactDom from 'react-dom';
 import Images from '../assets/img';
@@ -13,11 +13,25 @@ const TaskForm = () => {
     img: '',
     goal: 0,
     time: 0,
+    expiration_day: '',
   });
 
   const [droper, setdroper] = useState(
     { content: 'Please select an image', pointing: 'below' },
   );
+
+  const changeDate = (event, data) => {
+    event.preventDefault();
+    if (data.value != null) {
+      setTask({
+        name: task.name,
+        img: task.img,
+        goal: event.target.value,
+        time: task.time,
+        expiration_day: data.value.toString(),
+      });
+    }
+  };
 
   const handleViewErrors = () => {
     if (task.img === '') {
@@ -45,6 +59,7 @@ const TaskForm = () => {
             img: task.img,
             goal: task.goal,
             time: task.time,
+            expiration_day: task.expiration_day,
           });
           break;
         case 'hours':
@@ -53,6 +68,7 @@ const TaskForm = () => {
             img: task.img,
             goal: task.goal,
             time: event.target.value,
+            expiration_day: task.expiration_day,
           });
           break;
         case 'goal':
@@ -61,6 +77,7 @@ const TaskForm = () => {
             img: task.img,
             goal: event.target.value,
             time: task.time,
+            expiration_day: task.expiration_day,
           });
           break;
         default:
@@ -69,11 +86,13 @@ const TaskForm = () => {
     } else {
       setTask({
         name: task.name,
-        img: event.target.firstChild.src.toString(),
+        img: event.target.firstChild.src,
         goal: task.goal,
         time: task.time,
+        expiration_day: task.expiration_day,
       });
     }
+    console.log(task);
   };
 
   const handleSubmit = event => {
@@ -129,14 +148,16 @@ const TaskForm = () => {
               options={Images}
               onChange={handleState}
             />
-            <DatePicker />
+            <DatePicker handleDate={changeDate} />
           </Form>
           <label htmlFor="Hours" className="w-100">
             <input placeholder="Hours" className="w-100 mt-2" type="number" id="hours" name="hours" onChange={handleState} value={task.hours} />
+            <Label pointing>Invested Hours</Label>
           </label>
 
           <label htmlFor="Goal" className="w-100">
             <input placeholder="Goal" className="w-100 mt-2" type="number" id="goal" name="goal" onChange={handleState} value={task.goal} />
+            <Label pointing>Goal hours to invest</Label>
           </label>
 
           <div className="m-auto w-100 pt-3 pb-3">
