@@ -1,7 +1,7 @@
 import { FETCH_DATES } from '../actions/types';
 
 const initialState = [
-  { id: 1, expiration_day: new Date().toLocaleString('en-US').slice(0, 10).replace('/', '-') },
+  { id: 1, expiration_day: new Date().toLocaleString('en-GB').slice(0, 10).replaceAll('/', '-') },
 ];
 
 const datesReducer = (state = initialState, action) => {

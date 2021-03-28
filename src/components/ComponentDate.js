@@ -1,20 +1,16 @@
 import '../styles/carousel.css';
-import React, { useEffect, useRef, useState } from 'react';
+import React, { useEffect, useRef } from 'react';
 import Carousel from 'react-elastic-carousel';
 import { connect } from 'react-redux';
 import PropTypes from 'prop-types';
 import getTasks from '../requests/getTasks';
 import { fetchDatesAction } from '../actions';
 
-const ComponentDate = ({ items, get }) => {
+const ComponentDate = ({
+  items, get, setCurrentDate, currentDate,
+}) => {
   const List = items;
   let carousel = useRef(null);
-
-  const [currentDate, setCurrentDate] = useState(
-    {
-      currentDate: new Date().toLocaleString('en-US').slice(0, 10).replaceAll('/', '-'),
-    },
-  );
   useEffect(() => {
     if (!(localStorage.getItem('token') === true || localStorage.getItem('token') === false)) {
       getTasks('dates').then(response => {
@@ -46,10 +42,10 @@ const ComponentDate = ({ items, get }) => {
           carousel = ref;
         }}
         onNextEnd={
-          selectedDay => setCurrentDate(selectedDay)
+          selectedDay => setCurrentDate(new Date(selectedDay.item.children).toLocaleString('en-GB').slice(0, 10).replaceAll('/', '-'))
         }
         onPrevEnd={
-          selectedDay => setCurrentDate(selectedDay)
+          selectedDay => setCurrentDate(new Date(selectedDay.item.children).toLocaleString('en-GB').slice(0, 10).replaceAll('/', '-'))
         }
       >
         {List.map(item => (
@@ -80,6 +76,8 @@ ComponentDate.propTypes = {
     expiration_day: PropTypes.string,
   })).isRequired,
   get: PropTypes.func.isRequired,
+  setCurrentDate: PropTypes.func.isRequired,
+  currentDate: PropTypes.string.isRequired,
 };
 
 export default connect(mapStateToProps, mapDispatchToProps)(ComponentDate);

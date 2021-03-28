@@ -11,12 +11,15 @@ import { fetchTasksAction } from '../actions';
 import NoticeError from '../components/NoticeError';
 import Loading from '../components/loading';
 
-const Tasks = ({ tasks, get, searchDay }) => {
+const Tasks = ({ tasks, get }) => {
   const [load, setLoading] = useState(true);
+  const [selectedDay, setCurrentDate] = useState(
+    new Date().toLocaleString('en-GB').slice(0, 10).replaceAll('/', '-'),
+  );
 
   useEffect(() => {
     if (!(localStorage.getItem('token') === true || localStorage.getItem('token') === false)) {
-      getTasks(searchDay).then(response => {
+      getTasks(selectedDay).then(response => {
         if (response.error === 'Access token is missing in the request'
         || response.error === 'Invalid access token') {
           window.location.assign('/login');
@@ -34,7 +37,8 @@ const Tasks = ({ tasks, get, searchDay }) => {
         }
       });
     }
-  }, []);
+    console.log(selectedDay);
+  }, [selectedDay]);
   if (tasks.length === 0 && load) {
     return (
       <Loading display={load} />
@@ -43,7 +47,7 @@ const Tasks = ({ tasks, get, searchDay }) => {
   return (
     <div>
       <div>
-        <ComponentDate day={searchDay} />
+        <ComponentDate setCurrentDate={setCurrentDate} currentDate={selectedDay} />
         <Progress items={tasks} />
       </div>
       <div className="bg-tasks">
@@ -78,11 +82,6 @@ Tasks.propTypes = {
     progress: PropTypes.number,
   })).isRequired,
   get: PropTypes.func.isRequired,
-  searchDay: PropTypes.string,
-};
-
-Tasks.defaultProps = {
-  searchDay: '',
 };
 
 export default connect(mapStateToProps, mapDispatchToProps)(Tasks);
