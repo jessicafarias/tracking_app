@@ -92,7 +92,6 @@ const TaskForm = () => {
         expiration_day: task.expiration_day,
       });
     }
-    console.log(task);
   };
 
   const handleSubmit = event => {
