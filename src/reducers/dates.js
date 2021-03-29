@@ -1,8 +1,6 @@
 import { FETCH_DATES } from '../actions/types';
 
-const initialState = [
-  { id: 1, expiration_day: new Date().toLocaleString('en-GB').slice(0, 10).replaceAll('/', '-') },
-];
+const initialState = [];
 
 const datesReducer = (state = initialState, action) => {
   switch (action.type) {

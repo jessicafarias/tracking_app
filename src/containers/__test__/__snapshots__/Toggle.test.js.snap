@@ -1,0 +1,654 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Display Dates.js renders correctly all dates 1`] = `
+Array [
+  <div
+    className="view"
+  >
+    <div>
+      <div
+        className="d-flex flex-column align-items-center justify-content-center"
+      >
+        <p
+          className="w-100 text-center mt-5"
+        >
+          ADD NEW TASK TO DO
+        </p>
+        <div
+          className="p-4"
+        >
+          <label
+            className="w-100"
+            htmlFor="title"
+          >
+            <input
+              className="w-100"
+              id="name"
+              name="name"
+              onChange={[Function]}
+              placeholder="Task (short keyword)"
+              type="name"
+            />
+          </label>
+          <form
+            className="ui form"
+            onSubmit={[Function]}
+          >
+            <div
+              className="error field mt-2"
+            >
+              <div
+                aria-atomic={true}
+                className="ui pointing below prompt label"
+                id="drop-error-message"
+                onClick={[Function]}
+                role="alert"
+              >
+                Please select an image
+              </div>
+              <div
+                aria-describedby="drop-error-message"
+                aria-expanded={false}
+                aria-invalid={true}
+                className="ui fluid selection dropdown"
+                id="drop"
+                name="drop"
+                onBlur={[Function]}
+                onChange={[Function]}
+                onClick={[Function]}
+                onFocus={[Function]}
+                onKeyDown={[Function]}
+                onMouseDown={[Function]}
+                role="listbox"
+                tabIndex={0}
+              >
+                <div
+                  aria-atomic={true}
+                  aria-live="polite"
+                  className="divider default text"
+                  role="alert"
+                >
+                  Choose an image
+                </div>
+                <i
+                  aria-hidden="true"
+                  className="dropdown icon"
+                  onClick={[Function]}
+                />
+                <div
+                  className="menu transition"
+                >
+                  <div
+                    aria-checked={false}
+                    aria-selected={true}
+                    className="selected item"
+                    onClick={[Function]}
+                    role="option"
+                    style={
+                      Object {
+                        "pointerEvents": "all",
+                      }
+                    }
+                  >
+                    <img
+                      className="ui image"
+                      src="https://img.icons8.com/ultraviolet/40/000000/computer.png"
+                    />
+                    <span
+                      className="text"
+                    >
+                      computer
+                    </span>
+                  </div>
+                  <div
+                    aria-checked={false}
+                    aria-selected={false}
+                    className="item"
+                    onClick={[Function]}
+                    role="option"
+                    style={
+                      Object {
+                        "pointerEvents": "all",
+                      }
+                    }
+                  >
+                    <img
+                      className="ui image"
+                      src="https://img.icons8.com/ultraviolet/40/4a90e2/home--v1.png"
+                    />
+                    <span
+                      className="text"
+                    >
+                      house
+                    </span>
+                  </div>
+                  <div
+                    aria-checked={false}
+                    aria-selected={false}
+                    className="item"
+                    onClick={[Function]}
+                    role="option"
+                    style={
+                      Object {
+                        "pointerEvents": "all",
+                      }
+                    }
+                  >
+                    <img
+                      className="ui image"
+                      src="https://img.icons8.com/ultraviolet/40/4a90e2/user-male.png"
+                    />
+                    <span
+                      className="text"
+                    >
+                      short hair
+                    </span>
+                  </div>
+                  <div
+                    aria-checked={false}
+                    aria-selected={false}
+                    className="item"
+                    onClick={[Function]}
+                    role="option"
+                    style={
+                      Object {
+                        "pointerEvents": "all",
+                      }
+                    }
+                  >
+                    <img
+                      className="ui image"
+                      src="https://img.icons8.com/ultraviolet/40/4a90e2/user-female.png"
+                    />
+                    <span
+                      className="text"
+                    >
+                      long hair
+                    </span>
+                  </div>
+                  <div
+                    aria-checked={false}
+                    aria-selected={false}
+                    className="item"
+                    onClick={[Function]}
+                    role="option"
+                    style={
+                      Object {
+                        "pointerEvents": "all",
+                      }
+                    }
+                  >
+                    <img
+                      className="ui image"
+                      src="https://img.icons8.com/ultraviolet/40/4a90e2/sun--v2.png"
+                    />
+                    <span
+                      className="text"
+                    >
+                      sun
+                    </span>
+                  </div>
+                  <div
+                    aria-checked={false}
+                    aria-selected={false}
+                    className="item"
+                    onClick={[Function]}
+                    role="option"
+                    style={
+                      Object {
+                        "pointerEvents": "all",
+                      }
+                    }
+                  >
+                    <img
+                      className="ui image"
+                      src="https://img.icons8.com/ultraviolet/40/4a90e2/toolbox.png"
+                    />
+                    <span
+                      className="text"
+                    >
+                      work
+                    </span>
+                  </div>
+                  <div
+                    aria-checked={false}
+                    aria-selected={false}
+                    className="item"
+                    onClick={[Function]}
+                    role="option"
+                    style={
+                      Object {
+                        "pointerEvents": "all",
+                      }
+                    }
+                  >
+                    <img
+                      className="ui image"
+                      src="https://img.icons8.com/ultraviolet/40/4a90e2/twitter.png"
+                    />
+                    <span
+                      className="text"
+                    >
+                      social media
+                    </span>
+                  </div>
+                  <div
+                    aria-checked={false}
+                    aria-selected={false}
+                    className="item"
+                    onClick={[Function]}
+                    role="option"
+                    style={
+                      Object {
+                        "pointerEvents": "all",
+                      }
+                    }
+                  >
+                    <img
+                      className="ui image"
+                      src="https://img.icons8.com/ultraviolet/40/4a90e2/dribbble.png"
+                    />
+                    <span
+                      className="text"
+                    >
+                      drib
+                    </span>
+                  </div>
+                  <div
+                    aria-checked={false}
+                    aria-selected={false}
+                    className="item"
+                    onClick={[Function]}
+                    role="option"
+                    style={
+                      Object {
+                        "pointerEvents": "all",
+                      }
+                    }
+                  >
+                    <img
+                      className="ui avatar image"
+                      src="https://img.icons8.com/ultraviolet/40/4a90e2/music.png"
+                    />
+                    <span
+                      className="text"
+                    >
+                      music
+                    </span>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div
+              className="field"
+              style={
+                Object {
+                  "display": "inline-block",
+                  "position": "relative",
+                }
+              }
+            >
+              <div
+                className="field"
+              >
+                <div
+                  className="ui icon input"
+                >
+                  <input
+                    autoFocus={false}
+                    data-testid="datepicker-input"
+                    id="id"
+                    name="DATEPICKER"
+                    onBlur={[Function]}
+                    onChange={[Function]}
+                    onFocus={[Function]}
+                    onKeyDown={[Function]}
+                    placeholder="YYYY-MM-DD"
+                    readOnly={false}
+                    required={false}
+                    type="text"
+                    value=""
+                  />
+                  <i
+                    aria-hidden="true"
+                    className="calendar icon"
+                    data-testid="datepicker-icon"
+                    onClick={[Function]}
+                  />
+                </div>
+              </div>
+            </div>
+            <a
+              className="ui teal tag label"
+              onClick={[Function]}
+              title="You gonna start to track starting today until expiration day"
+            >
+              Expiration day
+            </a>
+          </form>
+          <label
+            className="w-100"
+            htmlFor="Hours"
+          >
+            <input
+              className="w-100 mt-2"
+              id="hours"
+              name="hours"
+              onChange={[Function]}
+              placeholder="Hours"
+              type="number"
+            />
+            <div
+              className="ui pointing label"
+              onClick={[Function]}
+            >
+              Invested Hours
+            </div>
+          </label>
+          <label
+            className="w-100"
+            htmlFor="Goal"
+          >
+            <input
+              className="w-100 mt-2"
+              id="goal"
+              name="goal"
+              onChange={[Function]}
+              placeholder="Goal"
+              type="number"
+              value={0}
+            />
+            <div
+              className="ui pointing label"
+              onClick={[Function]}
+            >
+              Goal hours to invest
+            </div>
+          </label>
+          <div
+            className="m-auto w-100 pt-3 pb-3"
+          >
+            <button
+              className="ui twitter button w-100"
+              onClick={[Function]}
+              type="submit"
+            >
+               Create task
+            </button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>,
+  <div
+    className="toggle"
+  >
+    <div
+      className="row w-100 m-0 p-0"
+    >
+      <button
+        className="col-3 p-2 selected "
+        onClick={[Function]}
+        type="button"
+      >
+        <div>
+          <svg
+            className="svg-icon"
+            enableBackground="new 0 0 100 70"
+            id="Capa_1"
+            version="1.1"
+            viewBox="0 0 100 70"
+            x="0px"
+            xmlns="http://www.w3.org/2000/svg"
+            y="0px"
+          >
+            <g
+              className="st2"
+              id="out_1_"
+            >
+              <rect
+                height="11.1"
+                transform="matrix(-1.836970e-16 1 -1 -1.836970e-16 56.93 23.85)"
+                width="40.7"
+                x="-3.81"
+                y="34.84"
+              />
+              <rect
+                height="11.1"
+                transform="matrix(-1.836970e-16 1 -1 -1.836970e-16 75.43 20.15)"
+                width="25.9"
+                x="14.69"
+                y="42.24"
+              />
+              <rect
+                height="11.1"
+                transform="matrix(-1.836970e-16 1 -1 -1.836970e-16 69.88 -7.6)"
+                width="59.2"
+                x="9.14"
+                y="25.59"
+              />
+              <rect
+                height="11.1"
+                transform="matrix(-1.836970e-16 1 -1 -1.836970e-16 114.28 -7.6)"
+                width="14.8"
+                x="53.54"
+                y="47.79"
+              />
+              <rect
+                height="11.1"
+                transform="matrix(-1.836970e-16 1 -1 -1.836970e-16 99.48 -0.2)"
+                width="22.2"
+                x="38.74"
+                y="44.09"
+              />
+              <rect
+                height="55.5"
+                transform="matrix(-1.836970e-16 1 -1 -1.836970e-16 101.33 23.85)"
+                width="11.1"
+                x="33.19"
+                y="34.84"
+              />
+              <rect
+                height="14.8"
+                transform="matrix(-1.836970e-16 1 -1 -1.836970e-16 90.23 -50.15)"
+                width="37"
+                x="51.69"
+                y="12.64"
+              />
+              <rect
+                height="37"
+                transform="matrix(-1.836970e-16 1 -1 -1.836970e-16 90.23 -50.15)"
+                width="14.8"
+                x="62.79"
+                y="1.54"
+              />
+            </g>
+            <g
+              className="st3"
+              id="in_1_"
+            >
+              <rect
+                height="33.3"
+                width="3.7"
+                x="14.69"
+                y="23.74"
+              />
+              <rect
+                height="18.5"
+                width="3.7"
+                x="25.79"
+                y="38.54"
+              />
+              <rect
+                height="51.8"
+                width="3.7"
+                x="36.89"
+                y="5.24"
+              />
+              <rect
+                height="7.4"
+                width="3.7"
+                x="59.09"
+                y="49.64"
+              />
+              <rect
+                height="14.8"
+                width="3.7"
+                x="47.99"
+                y="42.24"
+              />
+              <rect
+                height="3.7"
+                width="48.1"
+                x="14.69"
+                y="60.74"
+              />
+              <rect
+                height="29.6"
+                width="7.4"
+                x="66.49"
+                y="5.24"
+              />
+              <rect
+                height="29.6"
+                transform="matrix(6.123234e-17 -1 1 6.123234e-17 50.15 90.23)"
+                width="7.4"
+                x="66.49"
+                y="5.24"
+              />
+            </g>
+          </svg>
+        </div>
+        <p
+          className="xs"
+        >
+          Add task
+        </p>
+      </button>
+      <button
+        className="col-3 p-2 "
+        onClick={[Function]}
+        type="button"
+      >
+        <div>
+          <svg
+            className="svg-icon"
+            enableBackground="new 0 0 100 70"
+            id="Capa_1"
+            style={
+              Object {
+                "padding": "5px",
+              }
+            }
+            version="1.1"
+            viewBox="0 0 100 70"
+            x="0px"
+            xmlns="http://www.w3.org/2000/svg"
+            y="0px"
+          >
+            <g
+              id="out"
+            >
+              <polygon
+                className="st0"
+                points="8.07,54.07 30.26,31.88 45.7,37.03 61.61,25.1 61.61,22.6 56.61,22.6 56.61,7.6 91.61,7.6 91.61,42.6 76.61,42.6 76.61,38.2 74.78,38.4 52.98,58.1 32.19,52.9 13.84,62.08"
+              />
+            </g>
+            <polygon
+              className="st1"
+              id="in"
+              points="11.61,57.6 31.61,37.6 46.61,42.6 66.61,27.6 66.61,17.6 61.61,17.6 61.61,12.6 86.61,12.6 86.61,37.6 81.61,37.6 81.61,32.6 72.62,33.62 51.61,52.6 31.61,47.6 "
+            />
+          </svg>
+        </div>
+        <p
+          className="xs"
+        >
+          Track
+        </p>
+      </button>
+      <button
+        className="col-3 p-2 "
+        onClick={[Function]}
+        type="button"
+      >
+        <div>
+          <svg
+            className="svg-icon"
+            enableBackground="new 0 0 100 70"
+            id="Capa_1"
+            version="1.1"
+            viewBox="0 0 100 70"
+            x="0px"
+            xmlns="http://www.w3.org/2000/svg"
+            y="0px"
+          >
+            <circle
+              className="st0"
+              cx="47.84"
+              cy="36.85"
+              r="30"
+            />
+            <path
+              className="st0"
+              d="M49.84,2.85v32h32C81.86,13.25,71.44,2.33,49.84,2.85z"
+            />
+          </svg>
+        </div>
+        <p
+          className="xs"
+        >
+          Your Progress
+        </p>
+      </button>
+      <button
+        className="col-3 p-2 "
+        onClick={[Function]}
+        type="button"
+      >
+        <div>
+          <svg
+            className="svg-icon"
+            enableBackground="new 0 0 100 100;"
+            id="Capa_1"
+            style={
+              Object {
+                "padding": "5px",
+              }
+            }
+            version="1.1"
+            viewBox="0 0 100 70"
+            x="0px"
+            xmlns="http://www.w3.org/2000/svg"
+            y="0px"
+          >
+            <circle
+              className="st0"
+              cx="21"
+              cy="34.84"
+              r="10"
+            />
+            <circle
+              className="st0"
+              cx="46"
+              cy="34.84"
+              r="10"
+            />
+            <circle
+              className="st0"
+              cx="70"
+              cy="34.84"
+              r="10"
+            />
+          </svg>
+        </div>
+        <p
+          className="xs"
+        >
+          More
+        </p>
+      </button>
+    </div>
+  </div>,
+]
+`;

@@ -1,0 +1,378 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Display Dates.js renders correctly all dates 1`] = `
+<div>
+  <div
+    className="d-flex flex-column align-items-center justify-content-center"
+  >
+    <p
+      className="w-100 text-center mt-5"
+    >
+      ADD NEW TASK TO DO
+    </p>
+    <div
+      className="p-4"
+    >
+      <label
+        className="w-100"
+        htmlFor="title"
+      >
+        <input
+          className="w-100"
+          id="name"
+          name="name"
+          onChange={[Function]}
+          placeholder="Task (short keyword)"
+          type="name"
+        />
+      </label>
+      <form
+        className="ui form"
+        onSubmit={[Function]}
+      >
+        <div
+          className="error field mt-2"
+        >
+          <div
+            aria-atomic={true}
+            className="ui pointing below prompt label"
+            id="drop-error-message"
+            onClick={[Function]}
+            role="alert"
+          >
+            Please select an image
+          </div>
+          <div
+            aria-describedby="drop-error-message"
+            aria-expanded={false}
+            aria-invalid={true}
+            className="ui fluid selection dropdown"
+            id="drop"
+            name="drop"
+            onBlur={[Function]}
+            onChange={[Function]}
+            onClick={[Function]}
+            onFocus={[Function]}
+            onKeyDown={[Function]}
+            onMouseDown={[Function]}
+            role="listbox"
+            tabIndex={0}
+          >
+            <div
+              aria-atomic={true}
+              aria-live="polite"
+              className="divider default text"
+              role="alert"
+            >
+              Choose an image
+            </div>
+            <i
+              aria-hidden="true"
+              className="dropdown icon"
+              onClick={[Function]}
+            />
+            <div
+              className="menu transition"
+            >
+              <div
+                aria-checked={false}
+                aria-selected={true}
+                className="selected item"
+                onClick={[Function]}
+                role="option"
+                style={
+                  Object {
+                    "pointerEvents": "all",
+                  }
+                }
+              >
+                <img
+                  className="ui image"
+                  src="https://img.icons8.com/ultraviolet/40/000000/computer.png"
+                />
+                <span
+                  className="text"
+                >
+                  computer
+                </span>
+              </div>
+              <div
+                aria-checked={false}
+                aria-selected={false}
+                className="item"
+                onClick={[Function]}
+                role="option"
+                style={
+                  Object {
+                    "pointerEvents": "all",
+                  }
+                }
+              >
+                <img
+                  className="ui image"
+                  src="https://img.icons8.com/ultraviolet/40/4a90e2/home--v1.png"
+                />
+                <span
+                  className="text"
+                >
+                  house
+                </span>
+              </div>
+              <div
+                aria-checked={false}
+                aria-selected={false}
+                className="item"
+                onClick={[Function]}
+                role="option"
+                style={
+                  Object {
+                    "pointerEvents": "all",
+                  }
+                }
+              >
+                <img
+                  className="ui image"
+                  src="https://img.icons8.com/ultraviolet/40/4a90e2/user-male.png"
+                />
+                <span
+                  className="text"
+                >
+                  short hair
+                </span>
+              </div>
+              <div
+                aria-checked={false}
+                aria-selected={false}
+                className="item"
+                onClick={[Function]}
+                role="option"
+                style={
+                  Object {
+                    "pointerEvents": "all",
+                  }
+                }
+              >
+                <img
+                  className="ui image"
+                  src="https://img.icons8.com/ultraviolet/40/4a90e2/user-female.png"
+                />
+                <span
+                  className="text"
+                >
+                  long hair
+                </span>
+              </div>
+              <div
+                aria-checked={false}
+                aria-selected={false}
+                className="item"
+                onClick={[Function]}
+                role="option"
+                style={
+                  Object {
+                    "pointerEvents": "all",
+                  }
+                }
+              >
+                <img
+                  className="ui image"
+                  src="https://img.icons8.com/ultraviolet/40/4a90e2/sun--v2.png"
+                />
+                <span
+                  className="text"
+                >
+                  sun
+                </span>
+              </div>
+              <div
+                aria-checked={false}
+                aria-selected={false}
+                className="item"
+                onClick={[Function]}
+                role="option"
+                style={
+                  Object {
+                    "pointerEvents": "all",
+                  }
+                }
+              >
+                <img
+                  className="ui image"
+                  src="https://img.icons8.com/ultraviolet/40/4a90e2/toolbox.png"
+                />
+                <span
+                  className="text"
+                >
+                  work
+                </span>
+              </div>
+              <div
+                aria-checked={false}
+                aria-selected={false}
+                className="item"
+                onClick={[Function]}
+                role="option"
+                style={
+                  Object {
+                    "pointerEvents": "all",
+                  }
+                }
+              >
+                <img
+                  className="ui image"
+                  src="https://img.icons8.com/ultraviolet/40/4a90e2/twitter.png"
+                />
+                <span
+                  className="text"
+                >
+                  social media
+                </span>
+              </div>
+              <div
+                aria-checked={false}
+                aria-selected={false}
+                className="item"
+                onClick={[Function]}
+                role="option"
+                style={
+                  Object {
+                    "pointerEvents": "all",
+                  }
+                }
+              >
+                <img
+                  className="ui image"
+                  src="https://img.icons8.com/ultraviolet/40/4a90e2/dribbble.png"
+                />
+                <span
+                  className="text"
+                >
+                  drib
+                </span>
+              </div>
+              <div
+                aria-checked={false}
+                aria-selected={false}
+                className="item"
+                onClick={[Function]}
+                role="option"
+                style={
+                  Object {
+                    "pointerEvents": "all",
+                  }
+                }
+              >
+                <img
+                  className="ui avatar image"
+                  src="https://img.icons8.com/ultraviolet/40/4a90e2/music.png"
+                />
+                <span
+                  className="text"
+                >
+                  music
+                </span>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div
+          className="field"
+          style={
+            Object {
+              "display": "inline-block",
+              "position": "relative",
+            }
+          }
+        >
+          <div
+            className="field"
+          >
+            <div
+              className="ui icon input"
+            >
+              <input
+                autoFocus={false}
+                data-testid="datepicker-input"
+                id="id"
+                name="DATEPICKER"
+                onBlur={[Function]}
+                onChange={[Function]}
+                onFocus={[Function]}
+                onKeyDown={[Function]}
+                placeholder="YYYY-MM-DD"
+                readOnly={false}
+                required={false}
+                type="text"
+                value=""
+              />
+              <i
+                aria-hidden="true"
+                className="calendar icon"
+                data-testid="datepicker-icon"
+                onClick={[Function]}
+              />
+            </div>
+          </div>
+        </div>
+        <a
+          className="ui teal tag label"
+          onClick={[Function]}
+          title="You gonna start to track starting today until expiration day"
+        >
+          Expiration day
+        </a>
+      </form>
+      <label
+        className="w-100"
+        htmlFor="Hours"
+      >
+        <input
+          className="w-100 mt-2"
+          id="hours"
+          name="hours"
+          onChange={[Function]}
+          placeholder="Hours"
+          type="number"
+        />
+        <div
+          className="ui pointing label"
+          onClick={[Function]}
+        >
+          Invested Hours
+        </div>
+      </label>
+      <label
+        className="w-100"
+        htmlFor="Goal"
+      >
+        <input
+          className="w-100 mt-2"
+          id="goal"
+          name="goal"
+          onChange={[Function]}
+          placeholder="Goal"
+          type="number"
+          value={0}
+        />
+        <div
+          className="ui pointing label"
+          onClick={[Function]}
+        >
+          Goal hours to invest
+        </div>
+      </label>
+      <div
+        className="m-auto w-100 pt-3 pb-3"
+      >
+        <button
+          className="ui twitter button w-100"
+          onClick={[Function]}
+          type="submit"
+        >
+           Create task
+        </button>
+      </div>
+    </div>
+  </div>
+</div>
+`;
