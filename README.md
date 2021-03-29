@@ -11,7 +11,7 @@ Tracking your time
   <h3 align="center">Track</h3>
 
   <p align="center">
-    This project is created with the porpuse of register and tracking the time invested on diferent tasks. The UI has diferent interactive elements like a toogle, a funcional carousel to see the task. Also the login/logout is implemented using tokens so fell free to use any password it will be encripted.<br /></p>
+    This project is created with the porpuse of register and tracking the time invested on diferent tasks. The login/logout is implemented using tokens so feel free to use any password it will be encripted.<br /></p>
     <h2 align="center">SCREENSHOTS</h2>
 
   <p align="center">
@@ -28,6 +28,12 @@ Tracking your time
 
 
 <!-- ABOUT THE PROJECT -->
+### Features
+* Create a new task that will repeat until the expiration day
+* Login with secure password and tokens
+* Display a list of daily tasks or change the view of tasks per day
+* See all tasks per day using the carousel of dates
+* The application will show notices when the input data is wrong
 
 ## Live Demo
 It's deployed [here](https://vigorous-minsky-e3bf16.netlify.app/) on netlify
@@ -42,7 +48,6 @@ This project was built using these technologies.
 * Stylelint
 * VScode
 * Jest
-
 
 ### Getting Started
 
