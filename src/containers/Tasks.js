@@ -24,7 +24,7 @@ const Tasks = ({ tasks, get }) => {
         || response.error === 'Invalid access token') {
           window.location.assign('/login');
         } else {
-          if (response.length === 0) {
+          if (response.length <= 0) {
             reactDom.render(
               <NoticeError message="You don't have any task created" />,
               document.getElementById('notice').appendChild(document.createElement('DIV')),
@@ -37,7 +37,6 @@ const Tasks = ({ tasks, get }) => {
         }
       });
     }
-    console.log(selectedDay);
   }, [selectedDay]);
   if (tasks.length === 0 && load) {
     return (

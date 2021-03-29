@@ -7,7 +7,7 @@ import getTasks from '../requests/getTasks';
 import { fetchDatesAction } from '../actions';
 
 const ComponentDate = ({
-  items, get, setCurrentDate, currentDate,
+  items, get, setCurrentDate,
 }) => {
   const List = items;
   let carousel = useRef(null);
@@ -31,7 +31,6 @@ const ComponentDate = ({
         }
       });
     }
-    console.log(currentDate);
   }, []);
 
   return (
@@ -77,7 +76,6 @@ ComponentDate.propTypes = {
   })).isRequired,
   get: PropTypes.func.isRequired,
   setCurrentDate: PropTypes.func.isRequired,
-  currentDate: PropTypes.string.isRequired,
 };
 
 export default connect(mapStateToProps, mapDispatchToProps)(ComponentDate);
