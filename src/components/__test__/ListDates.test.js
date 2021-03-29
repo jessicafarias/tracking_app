@@ -15,7 +15,7 @@ describe('Display Dates.js', () => {
     const tree = TestRenderer.create(
       <Provider store={store}>
         <BrowserRouter>
-          <ListDates tasks={[]}/>
+          <ListDates tasks={[]} />
         </BrowserRouter>
       </Provider>,
     ).toJSON();
