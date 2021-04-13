@@ -1,0 +1,27 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Display Dates.js renders correctly all dates 1`] = `
+<div>
+  <div>
+    <p
+      className="day-tag"
+    >
+      Today
+    </p>
+  </div>
+  <div>
+    <p
+      className="day-tag"
+    >
+      Yesterday
+    </p>
+  </div>
+  <div>
+    <p
+      className="day-tag"
+    >
+      Last week
+    </p>
+  </div>
+</div>
+`;

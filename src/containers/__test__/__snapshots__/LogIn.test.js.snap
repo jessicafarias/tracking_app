@@ -1,0 +1,59 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Display Dates.js renders correctly all dates 1`] = `
+<div
+  className="w-100 m-auto d-flex align-items-center justfy-content-center flex-column session pt-5 mt-2"
+>
+  <p>
+    LOG IN
+  </p>
+  <form>
+    <div
+      className="d-flex align-items-center justify-content-center m-auto flex-column pt-2"
+    >
+      <label
+        className="p-2 ui input"
+        htmlFor="title"
+      >
+        <input
+          id="email"
+          name="email"
+          onChange={[Function]}
+          placeholder="Username"
+          type="text"
+          value=""
+        />
+      </label>
+      <label
+        className="p-2 ui input"
+        htmlFor="title"
+      >
+        <input
+          id="password"
+          name="password"
+          onChange={[Function]}
+          placeholder="Password"
+          type="password"
+          value=""
+        />
+      </label>
+      <div
+        className="p-2"
+      >
+        <button
+          className="ui primary button"
+          onClick={[Function]}
+          type="submit"
+        >
+          Login
+        </button>
+      </div>
+    </div>
+  </form>
+  <a
+    href="/signUp"
+  >
+    Register
+  </a>
+</div>
+`;

@@ -1,0 +1,42 @@
+.st0 {
+  fill: #afb3b7;
+  stroke: #212935;
+  stroke-width: 5;
+  stroke-miterlimit: 10;
+}
+.st1 { fill: #ced1d2; }
+
+.st2 {
+  fill: #fff;
+  stroke: #0c8fa0;
+  stroke-width: 5;
+  stroke-miterlimit: 10;
+}
+.st3 { fill: #fff; }
+
+button {
+  border: none;
+  background-color: #313944;
+  color: white;
+  padding: 5px;
+}
+
+.selected {
+  background-color: #65c2ec;
+}
+
+.xs {
+  font-size: xx-small;
+}
+
+.svg-icon {
+  height: 32px;
+  max-width: 32px;
+}
+
+.toggle {
+  position: fixed;
+  bottom: 0;
+  right: 0;
+  width: 100%;
+}

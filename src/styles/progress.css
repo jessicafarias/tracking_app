@@ -1,0 +1,38 @@
+#big > .rec-carousel-wrapper > .galrjd {
+  width: 110% !important;
+  overflow-x: hidden;
+}
+
+#big > .rec-carousel-wrapper > .galrjd > .iLquPE {
+  border: none;
+  background: none;
+  box-shadow: none;
+  display: none !important;
+  visibility: hidden !important;
+}
+
+#big button {
+  display: none !important;
+  visibility: hidden !important;
+}
+
+.percentage {
+  fill: rgb(59, 59, 59);
+  font-family: 'HRegular', sans-serif;
+  font-size: 10px;
+  font-weight: normal;
+  text-anchor: middle;
+}
+
+.subpercentaje {
+  fill: rgb(151, 151, 151);
+  font-family: 'HRegular', sans-serif;
+  font-size: 5px;
+  font-weight: normal;
+  text-anchor: middle;
+}
+
+.sc-dlfnbm {
+  width: 33vw;
+  min-width: 180px !important;
+}

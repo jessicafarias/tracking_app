@@ -1,0 +1,11 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Display Dates.js renders correctly all dates 1`] = `
+<div>
+  <p
+    className="day-tag"
+  >
+    Tasks
+  </p>
+</div>
+`;
